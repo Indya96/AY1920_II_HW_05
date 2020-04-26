@@ -11,6 +11,7 @@
 
 // Include required header files
 #include "I2C_Interface.h"
+#include "InterruptRoutines.h"
 #include "project.h"
 #include "stdio.h"
 
@@ -24,6 +25,12 @@
 *   \brief Address of the Status register
 */
 #define LIS3DH_STATUS_REG 0x27
+
+/**
+*   \X, Y and Z axis new data available
+*/
+
+#define LIS3DH_STATUS_REG_DATA_AVAILABLE 0x04 
 
 /**
 *   \brief Address of the Control register 1
@@ -51,14 +58,11 @@
 #define LIS3DH_CTRL_REG4_BDU_ACTIVE 0x80   
 
 /**
-*   \brief Address of the ADC output LSB register
+*   \brief Address of the X-Axis output LSB register
 */
-#define LIS3DH_OUT_ADC_3L 0x0C
+#define LIS3DH_OUT_X_L 0x28
 
-/**
-*   \brief Address of the ADC output MSB register
-*/
-#define LIS3DH_OUT_ADC_3H 0x0D
+
 
 int main(void)
 {
@@ -219,31 +223,56 @@ int main(void)
         UART_Debug_PutString("Error occurred during I2C comm to read control register4\r\n");   
     }
     
-    int16_t OutTemp;
+    int16_t OutX;
+    int16_t OutY;
+    int16_t OUTZ;
+    
     uint8_t header = 0xA0;
     uint8_t footer = 0xC0;
-    uint8_t OutArray[4]; 
-    uint8_t TemperatureData[2];
+    uint8_t OutArray[8]; 
+    uint8_t AccelerationData[6];
     
     OutArray[0] = header;
-    OutArray[3] = footer;
+    OutArray[7] = footer;
+    
+    
+    isr_StartEx(custom_TIMER_ISR);
+    Timer_Start();
+    timer_flag=0;
     
     for(;;)
     {
-        CyDelay(100);
-        error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
-                                            LIS3DH_OUT_ADC_3L,
-                                            &TemperatureData[0]);
-        
-        error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
-                                            LIS3DH_OUT_ADC_3H,
-                                            &TemperatureData[1]);
-        if(error == NO_ERROR)
+        if(timer_flag==1)
         {
-            OutTemp = (int16)((TemperatureData[0] | (TemperatureData[1]<<8)))>>6;
-            OutArray[1] = (uint8_t)(OutTemp & 0xFF);
-            OutArray[2] = (uint8_t)(OutTemp >> 8);
-            UART_Debug_PutArray(OutArray, 4);
+        
+            while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
+        
+            timer_flag=0;
+        
+            error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+                                            LIS3DH_OUT_X_L,6,
+                                            &AccelerationData[0]);
+        
+        
+            if(error == NO_ERROR)
+            {
+                OutArray[1]=AccelerationData[0];
+                OutArray[2]=AccelerationData[1];
+                OutArray[3]=AccelerationData[2];
+                OutArray[4]=AccelerationData[3];
+                OutArray[5]=AccelerationData[4];
+                OutArray[6]=AccelerationData[5];
+                
+                UART_Debug_PutArray(OutArray, 8);
+                
+                
+//                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)));
+                
+                
+//                OutArray[1] = (uint8_t)(OutTemp & 0xFF);
+//                OutArray[2] = (uint8_t)(OutTemp >> 8);
+//                UART_Debug_PutArray(OutArray, 4);
+            }
         }
     }
 }
