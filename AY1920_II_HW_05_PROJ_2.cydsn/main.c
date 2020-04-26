@@ -14,6 +14,7 @@
 #include "InterruptRoutines.h"
 #include "project.h"
 #include "stdio.h"
+#include "stdlib.h"
 
 /**
 *   \brief 7-bit I2C address of the slave device.
@@ -225,7 +226,11 @@ int main(void)
     
     int16_t OutX;
     int16_t OutY;
-    int16_t OUTZ;
+    int16_t OutZ;
+    
+    int16_t OutX_shifted;
+    int16_t OutY_shifted;
+    int16_t OutZ_shifted;
     
     uint8_t header = 0xA0;
     uint8_t footer = 0xC0;
@@ -236,19 +241,25 @@ int main(void)
     OutArray[7] = footer;
     
     
+    timer_flag=0;
+    
     isr_StartEx(custom_TIMER_ISR);
     Timer_Start();
-    timer_flag=0;
+    
     
     for(;;)
     {
-        if(timer_flag==1)
+        if(timer_flag==1)  //every 10 ms
         {
-        
+            
+            //wait until X, Y and Z axis new data are available
+            
             while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
         
             timer_flag=0;
-        
+            
+            //Multiwrite to read all the output registers
+            
             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
                                             LIS3DH_OUT_X_L,6,
                                             &AccelerationData[0]);
@@ -256,22 +267,27 @@ int main(void)
         
             if(error == NO_ERROR)
             {
-                OutArray[1]=AccelerationData[0];
-                OutArray[2]=AccelerationData[1];
-                OutArray[3]=AccelerationData[2];
-                OutArray[4]=AccelerationData[3];
-                OutArray[5]=AccelerationData[4];
-                OutArray[6]=AccelerationData[5];
+
+                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)));  //cast to int16
+                OutX_shifted= (abs(OutX))>>4;                                      //right justify
                 
+                OutArray[1] = (uint8_t)(OutX_shifted & 0xFF); //LSB
+                OutArray[2] = (uint8_t)(OutX_shifted >> 8);   //MSB
+                
+                OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)));
+                OutY_shifted= (abs(OutY))>>4;
+                
+                OutArray[3] = (uint8_t)(OutY_shifted & 0xFF);
+                OutArray[4] = (uint8_t)(OutY_shifted >> 8);
+                
+                OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)));
+                OutZ_shifted= (abs(OutZ))>>4;
+                
+                OutArray[5] = (uint8_t)(OutZ_shifted & 0xFF);
+                OutArray[6] = (uint8_t)(OutZ_shifted >> 8);
+
+        
                 UART_Debug_PutArray(OutArray, 8);
-                
-                
-//                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)));
-                
-                
-//                OutArray[1] = (uint8_t)(OutTemp & 0xFF);
-//                OutArray[2] = (uint8_t)(OutTemp >> 8);
-//                UART_Debug_PutArray(OutArray, 4);
             }
         }
     }
