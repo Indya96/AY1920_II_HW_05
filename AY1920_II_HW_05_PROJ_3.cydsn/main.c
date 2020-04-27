@@ -226,19 +226,27 @@ int main(void)
         UART_Debug_PutString("Error occurred during I2C comm to read control register4\r\n");   
     }
     
-    int16_t OutX;
-    int16_t OutY;
-    int16_t OutZ;
+    int16 OutX;
+    int16 OutY;
+    int16 OutZ;
     
+    
+    float32 OutX_converted;
+    float32 OutY_converted;
+    float32 OutZ_converted;
+    
+    int32_t OutX_rounded;
+    int32_t OutY_rounded;
+    int32_t OutZ_rounded;
 
     
     uint8_t header = 0xA0;
     uint8_t footer = 0xC0;
-    uint8_t OutArray[8]; 
+    uint8_t OutArray[14]; 
     uint8_t AccelerationData[6];
     
     OutArray[0] = header;
-    OutArray[7] = footer;
+    OutArray[13] = footer;
     
     
     timer_flag=0;
@@ -269,30 +277,51 @@ int main(void)
         
             if(error == NO_ERROR)
             {
-
-                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)));  //cast to int16
-                                                    
+                //cast to int16: I obtain the value in mG
+                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)))>>4;
                 
-                OutArray[1] = (uint8_t)(OutX & 0xFF); //LSB
-                OutArray[2] = (uint8_t)(OutX >> 8);   //MSB
+                
+                //the range is between -4G and +4G so the sensitivity is 2mG/digit
+                //to obtain the value in mm/s^2 we multiply also for G (=9.81)
+                
+                OutX_converted= ((float)OutX)*2*9.81; //mm/s^2
+                
+                OutX_rounded= (int32)(OutX_converted + 0.5);  //value in mm/s^2 rounded
+                                              
+                
+                OutArray[1] = (uint8_t)(OutX_rounded & 0xFF); //LSB
+                OutArray[2] = (uint8_t)(OutX_rounded >> 8);   
+                OutArray[3] = (uint8_t)(OutX_rounded >> 16);
+                OutArray[4] = (uint8_t)(OutX_rounded >> 24);  //MSB
 
                 
                 OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)));
                 
+                OutY_converted= ((float)OutY)*9.81; //mm/s^2
                 
-                OutArray[3] = (uint8_t)(OutY & 0xFF);
-                OutArray[4] = (uint8_t)(OutY >> 8);
+                OutY_rounded= (int32)(OutY_converted + 0.5);
+                                              
+                
+                OutArray[5] = (uint8_t)(OutY_rounded & 0xFF); //LSB
+                OutArray[6] = (uint8_t)(OutY_rounded >> 8);   
+                OutArray[7] = (uint8_t)(OutY_rounded >> 16);
+                OutArray[8] = (uint8_t)(OutY_rounded >> 24);  //MSB
                 
                 OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)));
                 
+                OutZ_converted= ((float)OutZ)*9.81; //mm/s^2
                 
-                OutArray[5] = (uint8_t)(OutZ & 0xFF);
-                OutArray[6] = (uint8_t)(OutZ >> 8);
+                OutZ_rounded= (int32)(OutZ_converted + 0.5);
+                                              
                 
+                OutArray[9] = (uint8_t)(OutZ_rounded & 0xFF); //LSB
+                OutArray[10] = (uint8_t)(OutZ_rounded >> 8);   
+                OutArray[11] = (uint8_t)(OutZ_rounded >> 16);
+                OutArray[12] = (uint8_t)(OutZ_rounded >> 24);  //MSB
                 
-                //the sensor is set with a sensitivity of 1mg/digit, so I'm sending the values in mg 
+                //I'm sending the values in mm/s^2 to keep the information of the first 3 decimals 
         
-                UART_Debug_PutArray(OutArray, 8);
+                UART_Debug_PutArray(OutArray, 14);
             }
         }
     }
