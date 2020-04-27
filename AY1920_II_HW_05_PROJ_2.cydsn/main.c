@@ -273,6 +273,7 @@ int main(void)
                 
                 OutArray[1] = (uint8_t)(OutX_shifted & 0xFF); //LSB
                 OutArray[2] = (uint8_t)(OutX_shifted >> 8);   //MSB
+
                 
                 OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)));
                 OutY_shifted= (abs(OutY))>>4;
@@ -285,7 +286,9 @@ int main(void)
                 
                 OutArray[5] = (uint8_t)(OutZ_shifted & 0xFF);
                 OutArray[6] = (uint8_t)(OutZ_shifted >> 8);
-
+                
+                
+                //the sensor is set with a sensitivity of 1mg/digit, so I'm sending the values in mg 
         
                 UART_Debug_PutArray(OutArray, 8);
             }
