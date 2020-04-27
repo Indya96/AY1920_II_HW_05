@@ -40,7 +40,7 @@
 
 /**
 *   \brief Hex value to set the accelerometer to output 3-axis
-     acceleration data in normal mode at 100Hz 
+     acceleration data at 100Hz 
 */
 #define LIS3DH_CTRL_REG1_SET 0x57
 
@@ -53,7 +53,7 @@
 
 
 /**
-*   \brief Hex value to set active the BDU, enable the high resolution 
+*   \brief Hex value to set active the BDU, enable the high resolution mode
     and set the range to +-4G
 */
 
@@ -287,6 +287,7 @@ int main(void)
                 //the range is between -4G and +4G and the sensitivity is 2mG/digit
                 //I need to represent 4000 numbers and so I need 12 bits
                 //so to right allign the 16-bit int I need to shift it of 4 bits  
+                
                 //to obtain the value in mm/s^2 I multiply for the sensitivity and also for 9.81
                 
                 OutX_converted= ((float32)OutX)*2*9.81; //value in mm/s^2 

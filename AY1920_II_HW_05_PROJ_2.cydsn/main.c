@@ -40,7 +40,7 @@
 
 /**
 *   \brief Hex value to set the accelerometer to output 3-axis
-     acceleration data at 100Hz 
+     acceleration data in normal mode at 100Hz 
 */
 #define LIS3DH_CTRL_REG1_SET 0x57
 
@@ -202,7 +202,7 @@ int main(void)
     }
     
     
-    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; // must be changed to the appropriate value
+    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; 
     
     error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
                                          LIS3DH_CTRL_REG4,
