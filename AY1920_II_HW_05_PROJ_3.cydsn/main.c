@@ -284,9 +284,9 @@ int main(void)
                 //the range is between -4G and +4G so the sensitivity is 2mG/digit
                 //to obtain the value in mm/s^2 we multiply also for G (=9.81)
                 
-                OutX_converted= ((float)OutX)*2*9.81; //mm/s^2
+                OutX_converted= ((float32)OutX)*2*9.81 +0.5; //value in mm/s^2 rounded
                 
-                OutX_rounded= (int32)(OutX_converted + 0.5);  //value in mm/s^2 rounded
+                OutX_rounded= (int32)OutX_converted;  
                                               
                 
                 OutArray[1] = (uint8_t)(OutX_rounded & 0xFF); //LSB
@@ -295,29 +295,29 @@ int main(void)
                 OutArray[4] = (uint8_t)(OutX_rounded >> 24);  //MSB
 
                 
-                OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)));
+                OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)))>>4;
                 
-                OutY_converted= ((float)OutY)*9.81; //mm/s^2
+                OutY_converted= (float32) ((float32)OutY) *2*9.81 +0.5; 
                 
-                OutY_rounded= (int32)(OutY_converted + 0.5);
+                OutY_rounded= (int32)OutY_converted ;
                                               
                 
-                OutArray[5] = (uint8_t)(OutY_rounded & 0xFF); //LSB
+                OutArray[5] = (uint8_t)(OutY_rounded & 0xFF); 
                 OutArray[6] = (uint8_t)(OutY_rounded >> 8);   
                 OutArray[7] = (uint8_t)(OutY_rounded >> 16);
-                OutArray[8] = (uint8_t)(OutY_rounded >> 24);  //MSB
+                OutArray[8] = (uint8_t)(OutY_rounded >> 24);  
                 
-                OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)));
+                OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)))>>4;
                 
-                OutZ_converted= ((float)OutZ)*9.81; //mm/s^2
+                OutZ_converted= ((float32)OutZ)*2*9.81 + 0.5; 
                 
-                OutZ_rounded= (int32)(OutZ_converted + 0.5);
+                OutZ_rounded= (int32)OutZ_converted ;
                                               
                 
-                OutArray[9] = (uint8_t)(OutZ_rounded & 0xFF); //LSB
+                OutArray[9] = (uint8_t)(OutZ_rounded & 0xFF); 
                 OutArray[10] = (uint8_t)(OutZ_rounded >> 8);   
                 OutArray[11] = (uint8_t)(OutZ_rounded >> 16);
-                OutArray[12] = (uint8_t)(OutZ_rounded >> 24);  //MSB
+                OutArray[12] = (uint8_t)(OutZ_rounded >> 24);  
                 
                 //I'm sending the values in mm/s^2 to keep the information of the first 3 decimals 
         
