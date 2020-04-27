@@ -10,19 +10,18 @@
  * ========================================
 */
 
-
-
-#include "InterruptRoutines.h"
-#include "project.h"
-
-CY_ISR(custom_TIMER_ISR)
-{
-    // Read Timer status register to bring interrupt line low
-    Timer_ReadStatusRegister();
+#ifndef __INTERRUPT_ROUTINES_H
+    #define __INTERRUPT_ROUTINES_H
     
-    // set the flag to one 
-    timer_flag = 1;
+    #include "cytypes.h"
     
-}
+    CY_ISR_PROTO(custom_TIMER_ISR);
+    
+    
+    volatile uint8 timer_flag;
+    
+    
+    
+    #endif
 
 /* [] END OF FILE */

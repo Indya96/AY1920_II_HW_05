@@ -10,8 +10,6 @@
  * ========================================
 */
 
-
-
 #include "InterruptRoutines.h"
 #include "project.h"
 
@@ -24,5 +22,9 @@ CY_ISR(custom_TIMER_ISR)
     timer_flag = 1;
     
 }
+
+
+
+
 
 /* [] END OF FILE */
