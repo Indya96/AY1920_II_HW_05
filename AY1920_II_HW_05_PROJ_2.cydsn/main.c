@@ -14,7 +14,7 @@
 #include "InterruptRoutines.h"
 #include "project.h"
 #include "stdio.h"
-#include "stdlib.h"
+
 
 /**
 *   \brief 7-bit I2C address of the slave device.
@@ -240,6 +240,7 @@ int main(void)
     timer_flag=0;
     
     isr_StartEx(custom_TIMER_ISR);
+    while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
     Timer_Start();
     
     

@@ -14,7 +14,7 @@
 #include "InterruptRoutines.h"
 #include "project.h"
 #include "stdio.h"
-#include "stdlib.h"
+
 
 /**
 *   \brief 7-bit I2C address of the slave device.
@@ -230,9 +230,7 @@ int main(void)
     int16_t OutY;
     int16_t OutZ;
     
-    int16_t OutX_shifted;
-    int16_t OutY_shifted;
-    int16_t OutZ_shifted;
+
     
     uint8_t header = 0xA0;
     uint8_t footer = 0xC0;
@@ -246,6 +244,8 @@ int main(void)
     timer_flag=0;
     
     isr_StartEx(custom_TIMER_ISR);
+    
+    while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
     Timer_Start();
     
     
@@ -271,23 +271,23 @@ int main(void)
             {
 
                 OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)));  //cast to int16
-                OutX_shifted= (abs(OutX))>>4;                                      //right justify
+                                                    
                 
-                OutArray[1] = (uint8_t)(OutX_shifted & 0xFF); //LSB
-                OutArray[2] = (uint8_t)(OutX_shifted >> 8);   //MSB
+                OutArray[1] = (uint8_t)(OutX & 0xFF); //LSB
+                OutArray[2] = (uint8_t)(OutX >> 8);   //MSB
 
                 
                 OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)));
-                OutY_shifted= (abs(OutY))>>4;
                 
-                OutArray[3] = (uint8_t)(OutY_shifted & 0xFF);
-                OutArray[4] = (uint8_t)(OutY_shifted >> 8);
+                
+                OutArray[3] = (uint8_t)(OutY & 0xFF);
+                OutArray[4] = (uint8_t)(OutY >> 8);
                 
                 OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)));
-                OutZ_shifted= (abs(OutZ))>>4;
                 
-                OutArray[5] = (uint8_t)(OutZ_shifted & 0xFF);
-                OutArray[6] = (uint8_t)(OutZ_shifted >> 8);
+                
+                OutArray[5] = (uint8_t)(OutZ & 0xFF);
+                OutArray[6] = (uint8_t)(OutZ >> 8);
                 
                 
                 //the sensor is set with a sensitivity of 1mg/digit, so I'm sending the values in mg 
