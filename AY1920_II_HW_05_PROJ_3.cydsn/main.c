@@ -51,12 +51,14 @@
 */
 #define LIS3DH_CTRL_REG4 0x23
 
+
 /**
-*   \brief Hex value to set active the BDU 
-     The range is by default +-2g
+*   \brief Hex value to set active the BDU, enable the high resolution 
+    and set the range to +-4G
 */
 
-#define LIS3DH_CTRL_REG4_BDU_ACTIVE 0x80   
+#define LIS3DH_CTRL_REG4_SET 0x98 
+   
 
 /**
 *   \brief Address of the X-Axis output LSB register
@@ -203,7 +205,7 @@ int main(void)
     }
     
     
-    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; // must be changed to the appropriate value
+    ctrl_reg4 = LIS3DH_CTRL_REG4_SET; // must be changed to the appropriate value
     
     error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
                                          LIS3DH_CTRL_REG4,

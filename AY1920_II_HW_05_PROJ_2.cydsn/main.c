@@ -52,12 +52,11 @@
 #define LIS3DH_CTRL_REG4 0x23
 
 /**
-*   \brief Hex value to set active the BDU, enable the high resolution 
-    and set the range to +-4G
+*   \brief Hex value to set active the BDU 
+     The range is by default +-2g
 */
 
-#define LIS3DH_CTRL_REG4_SET 0x98   
-
+#define LIS3DH_CTRL_REG4_BDU_ACTIVE 0x80
 /**
 *   \brief Address of the X-Axis output LSB register
 */
@@ -203,7 +202,7 @@ int main(void)
     }
     
     
-    ctrl_reg4 = LIS3DH_CTRL_REG4_SET; // must be changed to the appropriate value
+    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; // must be changed to the appropriate value
     
     error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
                                          LIS3DH_CTRL_REG4,
@@ -228,9 +227,6 @@ int main(void)
     int16_t OutY;
     int16_t OutZ;
     
-    int16_t OutX_shifted;
-    int16_t OutY_shifted;
-    int16_t OutZ_shifted;
     
     uint8_t header = 0xA0;
     uint8_t footer = 0xC0;
@@ -267,28 +263,34 @@ int main(void)
         
             if(error == NO_ERROR)
             {
+                //cast to a right-justified int16
 
-                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)));  //cast to int16
-                OutX_shifted= (abs(OutX))>>4;                                      //right justify
+                OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)))>>4;  
                 
-                OutArray[1] = (uint8_t)(OutX_shifted & 0xFF); //LSB
-                OutArray[2] = (uint8_t)(OutX_shifted >> 8);   //MSB
+                //the sensitivity is 1mG/digit
+                //the range is between -2G and +2G so we need to represent 4000 numbers
+                //to represent 4000 numbers we need 12 bits 
+                //so to right justify the 16 bits int we need to shift it of 4 bits
+               
+                
+                OutArray[1] = (uint8_t)(OutX & 0xFF); //LSB
+                OutArray[2] = (uint8_t)(OutX >> 8);   //MSB
 
                 
-                OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)));
-                OutY_shifted= (abs(OutY))>>4;
-                
-                OutArray[3] = (uint8_t)(OutY_shifted & 0xFF);
-                OutArray[4] = (uint8_t)(OutY_shifted >> 8);
-                
-                OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)));
-                OutZ_shifted= (abs(OutZ))>>4;
-                
-                OutArray[5] = (uint8_t)(OutZ_shifted & 0xFF);
-                OutArray[6] = (uint8_t)(OutZ_shifted >> 8);
+                OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)))>>4;
                 
                 
-                //the sensor is set with a sensitivity of 1mg/digit, so I'm sending the values in mg 
+                OutArray[3] = (uint8_t)(OutY & 0xFF);
+                OutArray[4] = (uint8_t)(OutY >> 8);
+                
+                OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)))>>4;
+                
+                
+                OutArray[5] = (uint8_t)(OutZ & 0xFF);
+                OutArray[6] = (uint8_t)(OutZ >> 8);
+                
+                
+                //we are sending the values in mG 
         
                 UART_Debug_PutArray(OutArray, 8);
             }
