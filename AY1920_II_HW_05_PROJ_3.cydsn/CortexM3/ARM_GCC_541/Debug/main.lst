@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
   21:main.c        **** */
   22:main.c        **** #define LIS3DH_DEVICE_ADDRESS 0x18
   23:main.c        **** 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 2
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 2
 
 
   24:main.c        **** 
@@ -80,7 +80,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
   40:main.c        **** 
   41:main.c        **** /**
   42:main.c        **** *   \brief Hex value to set the accelerometer to output 3-axis
-  43:main.c        ****      acceleration data in normal mode at 100Hz 
+  43:main.c        ****      acceleration data at 100Hz 
   44:main.c        **** */
   45:main.c        **** #define LIS3DH_CTRL_REG1_SET 0x57
   46:main.c        **** 
@@ -93,7 +93,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
   53:main.c        **** 
   54:main.c        **** 
   55:main.c        **** /**
-  56:main.c        **** *   \brief Hex value to set active the BDU, enable the high resolution 
+  56:main.c        **** *   \brief Hex value to set active the BDU, enable the high resolution mode
   57:main.c        ****     and set the range to +-4G
   58:main.c        **** */
   59:main.c        **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
   41              		.cfi_offset 4, -8
   42              		.cfi_offset 14, -4
   43 0002 94B0     		sub	sp, sp, #80
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 3
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 3
 
 
   44              		.cfi_def_cfa_offset 88
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
   79              		.loc 1 90 0
   80 002a 07A8     		add	r0, sp, #28
   81 002c FFF7FEFF 		bl	UART_Debug_PutString
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 4
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 4
 
 
   82              	.LVL6:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  109 0052 FFF7FEFF 		bl	UART_Debug_PutString
  110              	.LVL11:
  111 0056 02E0     		b	.L6
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 5
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 5
 
 
  112              	.LVL12:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  144              	.LVL20:
  145 0082 FFF7FEFF 		bl	UART_Debug_PutString
  146              	.LVL21:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 6
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 6
 
 
  147              	.L8:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  159:main.c        ****         }
  160:main.c        ****         else
  161:main.c        ****         {
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 7
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 7
 
 
  162:main.c        ****             UART_Debug_PutString("Error occurred during I2C comm to set control register 1\r\n");  
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  182:main.c        ****     }
  183:main.c        ****     
  184:main.c        ****     
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 8
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 8
 
 
  185:main.c        ****     /******************************************/
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  244 0110 14AC     		add	r4, sp, #80
  245              	.LVL44:
  246 0112 04F8372D 		strb	r2, [r4, #-55]!
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 9
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 9
 
 
  209:main.c        ****     
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  230:main.c        ****     int16 OutY;
  231:main.c        ****     int16 OutZ;
  232:main.c        ****     
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 10
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 10
 
 
  233:main.c        ****     
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  265:main.c        ****         if(timer_flag==1)  //every 10 ms
  302              		.loc 1 265 0
  303 0166 5A4B     		ldr	r3, .L21+56
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 11
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 11
 
 
  304 0168 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -649,18 +649,19 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  287:main.c        ****                 //the range is between -4G and +4G and the sensitivity is 2mG/digit
  288:main.c        ****                 //I need to represent 4000 numbers and so I need 12 bits
  289:main.c        ****                 //so to right allign the 16-bit int I need to shift it of 4 bits  
- 290:main.c        ****                 //to obtain the value in mm/s^2 I multiply for the sensitivity and also for 9.81
- 291:main.c        ****                 
- 292:main.c        ****                 OutX_converted= ((float32)OutX)*2*9.81; //value in mm/s^2 
- 328              		.loc 1 292 0
+ 290:main.c        ****                 
+ 291:main.c        ****                 //to obtain the value in mm/s^2 I multiply for the sensitivity and also for 9.81
+ 292:main.c        ****                 
+ 293:main.c        ****                 OutX_converted= ((float32)OutX)*2*9.81; //value in mm/s^2 
+ 328              		.loc 1 293 0
  329 0192 40F30B10 		sbfx	r0, r0, #4, #12
  330              	.LVL59:
  331 0196 FFF7FEFF 		bl	__aeabi_i2f
  332              	.LVL60:
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 12
+
+
  333 019a 0146     		mov	r1, r0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 12
-
-
  334 019c FFF7FEFF 		bl	__aeabi_fadd
  335              	.LVL61:
  336 01a0 FFF7FEFF 		bl	__aeabi_f2d
@@ -671,9 +672,9 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  341              	.LVL63:
  342 01ae FFF7FEFF 		bl	__aeabi_d2f
  343              	.LVL64:
- 293:main.c        ****                 
- 294:main.c        ****                 OutX_rounded= (int32)(OutX_converted +0.5);  //value in mm/s^2 rounded
- 344              		.loc 1 294 0
+ 294:main.c        ****                 
+ 295:main.c        ****                 OutX_rounded= (int32)(OutX_converted +0.5);  //value in mm/s^2 rounded
+ 344              		.loc 1 295 0
  345 01b2 FFF7FEFF 		bl	__aeabi_f2d
  346              	.LVL65:
  347 01b6 0022     		movs	r2, #0
@@ -682,45 +683,45 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  350              	.LVL66:
  351 01be FFF7FEFF 		bl	__aeabi_d2iz
  352              	.LVL67:
- 295:main.c        ****                                               
- 296:main.c        ****                 
- 297:main.c        ****                 OutArray[1] = (uint8_t)(OutX_rounded & 0xFF); //LSB
- 353              		.loc 1 297 0
+ 296:main.c        ****                                               
+ 297:main.c        ****                 
+ 298:main.c        ****                 OutArray[1] = (uint8_t)(OutX_rounded & 0xFF); //LSB
+ 353              		.loc 1 298 0
  354 01c2 8DF80900 		strb	r0, [sp, #9]
- 298:main.c        ****                 OutArray[2] = (uint8_t)(OutX_rounded >> 8);   
- 355              		.loc 1 298 0
+ 299:main.c        ****                 OutArray[2] = (uint8_t)(OutX_rounded >> 8);   
+ 355              		.loc 1 299 0
  356 01c6 C0F30723 		ubfx	r3, r0, #8, #8
  357 01ca 8DF80A30 		strb	r3, [sp, #10]
- 299:main.c        ****                 OutArray[3] = (uint8_t)(OutX_rounded >> 16);
- 358              		.loc 1 299 0
+ 300:main.c        ****                 OutArray[3] = (uint8_t)(OutX_rounded >> 16);
+ 358              		.loc 1 300 0
  359 01ce C0F30743 		ubfx	r3, r0, #16, #8
  360 01d2 8DF80B30 		strb	r3, [sp, #11]
- 300:main.c        ****                 OutArray[4] = (uint8_t)(OutX_rounded >> 24);  //MSB
- 361              		.loc 1 300 0
+ 301:main.c        ****                 OutArray[4] = (uint8_t)(OutX_rounded >> 24);  //MSB
+ 361              		.loc 1 301 0
  362 01d6 000E     		lsrs	r0, r0, #24
  363              	.LVL68:
  364 01d8 8DF80C00 		strb	r0, [sp, #12]
- 301:main.c        **** 
- 302:main.c        ****                 
- 303:main.c        ****                 OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)))>>4;
- 365              		.loc 1 303 0
+ 302:main.c        **** 
+ 303:main.c        ****                 
+ 304:main.c        ****                 OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)))>>4;
+ 365              		.loc 1 304 0
  366 01dc 9DF80230 		ldrb	r3, [sp, #2]	@ zero_extendqisi2
  367 01e0 9DF80300 		ldrb	r0, [sp, #3]	@ zero_extendqisi2
  368 01e4 43EA0020 		orr	r0, r3, r0, lsl #8
  369              	.LVL69:
- 304:main.c        ****                 
- 305:main.c        ****                 OutY_converted= (float32) ((float32)OutY) *2*9.81; 
- 370              		.loc 1 305 0
+ 305:main.c        ****                 
+ 306:main.c        ****                 OutY_converted= (float32) ((float32)OutY) *2*9.81; 
+ 370              		.loc 1 306 0
  371 01e8 40F30B10 		sbfx	r0, r0, #4, #12
  372              	.LVL70:
  373 01ec FFF7FEFF 		bl	__aeabi_i2f
  374              	.LVL71:
  375 01f0 0146     		mov	r1, r0
  376 01f2 FFF7FEFF 		bl	__aeabi_fadd
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 13
+
+
  377              	.LVL72:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 13
-
-
  378 01f6 FFF7FEFF 		bl	__aeabi_f2d
  379              	.LVL73:
  380 01fa 27A3     		adr	r3, .L21
@@ -729,9 +730,9 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  383              	.LVL74:
  384 0204 FFF7FEFF 		bl	__aeabi_d2f
  385              	.LVL75:
- 306:main.c        ****                 
- 307:main.c        ****                 OutY_rounded= (int32)(OutY_converted + 0.5);
- 386              		.loc 1 307 0
+ 307:main.c        ****                 
+ 308:main.c        ****                 OutY_rounded= (int32)(OutY_converted + 0.5);
+ 386              		.loc 1 308 0
  387 0208 FFF7FEFF 		bl	__aeabi_f2d
  388              	.LVL76:
  389 020c 0022     		movs	r2, #0
@@ -740,34 +741,34 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  392              	.LVL77:
  393 0214 FFF7FEFF 		bl	__aeabi_d2iz
  394              	.LVL78:
- 308:main.c        ****                                               
- 309:main.c        ****                 
- 310:main.c        ****                 OutArray[5] = (uint8_t)(OutY_rounded & 0xFF); 
- 395              		.loc 1 310 0
+ 309:main.c        ****                                               
+ 310:main.c        ****                 
+ 311:main.c        ****                 OutArray[5] = (uint8_t)(OutY_rounded & 0xFF); 
+ 395              		.loc 1 311 0
  396 0218 8DF80D00 		strb	r0, [sp, #13]
- 311:main.c        ****                 OutArray[6] = (uint8_t)(OutY_rounded >> 8);   
- 397              		.loc 1 311 0
+ 312:main.c        ****                 OutArray[6] = (uint8_t)(OutY_rounded >> 8);   
+ 397              		.loc 1 312 0
  398 021c C0F30723 		ubfx	r3, r0, #8, #8
  399 0220 8DF80E30 		strb	r3, [sp, #14]
- 312:main.c        ****                 OutArray[7] = (uint8_t)(OutY_rounded >> 16);
- 400              		.loc 1 312 0
+ 313:main.c        ****                 OutArray[7] = (uint8_t)(OutY_rounded >> 16);
+ 400              		.loc 1 313 0
  401 0224 C0F30743 		ubfx	r3, r0, #16, #8
  402 0228 8DF80F30 		strb	r3, [sp, #15]
- 313:main.c        ****                 OutArray[8] = (uint8_t)(OutY_rounded >> 24);  
- 403              		.loc 1 313 0
+ 314:main.c        ****                 OutArray[8] = (uint8_t)(OutY_rounded >> 24);  
+ 403              		.loc 1 314 0
  404 022c 000E     		lsrs	r0, r0, #24
  405              	.LVL79:
  406 022e 8DF81000 		strb	r0, [sp, #16]
- 314:main.c        ****                 
- 315:main.c        ****                 OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)))>>4;
- 407              		.loc 1 315 0
+ 315:main.c        ****                 
+ 316:main.c        ****                 OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)))>>4;
+ 407              		.loc 1 316 0
  408 0232 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
  409 0236 9DF80500 		ldrb	r0, [sp, #5]	@ zero_extendqisi2
  410 023a 43EA0020 		orr	r0, r3, r0, lsl #8
  411              	.LVL80:
- 316:main.c        ****                 
- 317:main.c        ****                 OutZ_converted= ((float32)OutZ)*2*9.81; 
- 412              		.loc 1 317 0
+ 317:main.c        ****                 
+ 318:main.c        ****                 OutZ_converted= ((float32)OutZ)*2*9.81; 
+ 412              		.loc 1 318 0
  413 023e 40F30B10 		sbfx	r0, r0, #4, #12
  414              	.LVL81:
  415 0242 FFF7FEFF 		bl	__aeabi_i2f
@@ -777,18 +778,18 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  419              	.LVL83:
  420 024c FFF7FEFF 		bl	__aeabi_f2d
  421              	.LVL84:
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 14
+
+
  422 0250 11A3     		adr	r3, .L21
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 14
-
-
  423 0252 D3E90023 		ldrd	r2, [r3]
  424 0256 FFF7FEFF 		bl	__aeabi_dmul
  425              	.LVL85:
  426 025a FFF7FEFF 		bl	__aeabi_d2f
  427              	.LVL86:
- 318:main.c        ****                 
- 319:main.c        ****                 OutZ_rounded= (int32)(OutZ_converted + 0.5);
- 428              		.loc 1 319 0
+ 319:main.c        ****                 
+ 320:main.c        ****                 OutZ_rounded= (int32)(OutZ_converted + 0.5);
+ 428              		.loc 1 320 0
  429 025e FFF7FEFF 		bl	__aeabi_f2d
  430              	.LVL87:
  431 0262 0022     		movs	r2, #0
@@ -797,29 +798,29 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  434              	.LVL88:
  435 026a FFF7FEFF 		bl	__aeabi_d2iz
  436              	.LVL89:
- 320:main.c        ****                                               
- 321:main.c        ****                 
- 322:main.c        ****                 OutArray[9] = (uint8_t)(OutZ_rounded & 0xFF); 
- 437              		.loc 1 322 0
+ 321:main.c        ****                                               
+ 322:main.c        ****                 
+ 323:main.c        ****                 OutArray[9] = (uint8_t)(OutZ_rounded & 0xFF); 
+ 437              		.loc 1 323 0
  438 026e 8DF81100 		strb	r0, [sp, #17]
- 323:main.c        ****                 OutArray[10] = (uint8_t)(OutZ_rounded >> 8);   
- 439              		.loc 1 323 0
+ 324:main.c        ****                 OutArray[10] = (uint8_t)(OutZ_rounded >> 8);   
+ 439              		.loc 1 324 0
  440 0272 C0F30723 		ubfx	r3, r0, #8, #8
  441 0276 8DF81230 		strb	r3, [sp, #18]
- 324:main.c        ****                 OutArray[11] = (uint8_t)(OutZ_rounded >> 16);
- 442              		.loc 1 324 0
+ 325:main.c        ****                 OutArray[11] = (uint8_t)(OutZ_rounded >> 16);
+ 442              		.loc 1 325 0
  443 027a C0F30743 		ubfx	r3, r0, #16, #8
  444 027e 8DF81330 		strb	r3, [sp, #19]
- 325:main.c        ****                 OutArray[12] = (uint8_t)(OutZ_rounded >> 24);  
- 445              		.loc 1 325 0
+ 326:main.c        ****                 OutArray[12] = (uint8_t)(OutZ_rounded >> 24);  
+ 445              		.loc 1 326 0
  446 0282 000E     		lsrs	r0, r0, #24
  447              	.LVL90:
  448 0284 8DF81400 		strb	r0, [sp, #20]
- 326:main.c        ****                 
- 327:main.c        ****                 //I'm sending the values in mm/s^2 to keep the information of the first 3 decimals 
- 328:main.c        ****         
- 329:main.c        ****                 UART_Debug_PutArray(OutArray, 14);
- 449              		.loc 1 329 0
+ 327:main.c        ****                 
+ 328:main.c        ****                 //I'm sending the values in mm/s^2 to keep the information of the first 3 decimals 
+ 329:main.c        ****         
+ 330:main.c        ****                 UART_Debug_PutArray(OutArray, 14);
+ 449              		.loc 1 330 0
  450 0288 0E21     		movs	r1, #14
  451 028a 02A8     		add	r0, sp, #8
  452 028c FFF7FEFF 		bl	UART_Debug_PutArray
@@ -837,10 +838,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  463 02ac 78000000 		.word	.LC3
  464 02b0 98000000 		.word	.LC4
  465 02b4 D4000000 		.word	.LC5
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 15
+
+
  466 02b8 F0000000 		.word	.LC6
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 15
-
-
  467 02bc 28010000 		.word	.LC7
  468 02c0 64010000 		.word	.LC8
  469 02c4 9C010000 		.word	.LC9
@@ -897,10 +898,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  497              	.LC5:
  498 00d4 0D0A5772 		.ascii	"\015\012Writing new values..\015\012\000"
  498      6974696E 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 16
+
+
  498      67206E65 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 16
-
-
  498      77207661 
  498      6C756573 
  499 00ed 000000   		.space	3
@@ -957,10 +958,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  524              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  525              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  526              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 17
+
+
  527              		.file 5 "ErrorCodes.h"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 17
-
-
  528              		.file 6 "InterruptRoutines.h"
  529              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
  530              		.file 8 "I2C_Interface.h"
@@ -1017,10 +1018,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  581 005f 04       		.byte	0x4
  582 0060 07       		.byte	0x7
  583 0061 E8010000 		.4byte	.LASF7
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 18
+
+
  584 0065 02       		.uleb128 0x2
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 18
-
-
  585 0066 08       		.byte	0x8
  586 0067 05       		.byte	0x5
  587 0068 FC000000 		.4byte	.LASF8
@@ -1077,10 +1078,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  638 00d5 02       		.uleb128 0x2
  639 00d6 01       		.byte	0x1
  640 00d7 08       		.byte	0x8
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 19
+
+
  641 00d8 BD020000 		.4byte	.LASF19
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 19
-
-
  642 00dc 06       		.uleb128 0x6
  643 00dd 97000000 		.4byte	0x97
  644 00e1 07       		.uleb128 0x7
@@ -1137,10 +1138,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  695 014a D7000000 		.4byte	.LASF27
  696 014e 01       		.byte	0x1
  697 014f 6B       		.byte	0x6b
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 20
+
+
  698 0150 81000000 		.4byte	0x81
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 20
-
-
  699 0154 02       		.uleb128 0x2
  700 0155 91       		.byte	0x91
  701 0156 43       		.sleb128 -61
@@ -1197,10 +1198,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  752 01c5 BB000000 		.4byte	0xbb
  753 01c9 68010000 		.4byte	.LLST6
  754 01cd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 21
+
+
  755 01ce 60010000 		.4byte	.LASF36
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 21
-
-
  756 01d2 01       		.byte	0x1
  757 01d3 EE       		.byte	0xee
  758 01d4 8C000000 		.4byte	0x8c
@@ -1257,10 +1258,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  809 0247 B4010000 		.4byte	.LLST10
  810 024b 0F       		.uleb128 0xf
  811 024c 1E000000 		.4byte	.LVL4
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 22
+
+
  812 0250 0A060000 		.4byte	0x60a
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 22
-
-
  813 0254 5F020000 		.4byte	0x25f
  814 0258 10       		.uleb128 0x10
  815 0259 01       		.uleb128 0x1
@@ -1317,10 +1318,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  866 02b3 01       		.uleb128 0x1
  867 02b4 50       		.byte	0x50
  868 02b5 01       		.uleb128 0x1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 23
+
+
  869 02b6 35       		.byte	0x35
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 23
-
-
  870 02b7 00       		.byte	0
  871 02b8 0F       		.uleb128 0xf
  872 02b9 42000000 		.4byte	.LVL8
@@ -1377,10 +1378,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  923 030d 20060000 		.4byte	0x620
  924 0311 1F030000 		.4byte	0x31f
  925 0315 10       		.uleb128 0x10
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 24
+
+
  926 0316 01       		.uleb128 0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 24
-
-
  927 0317 50       		.byte	0x50
  928 0318 05       		.uleb128 0x5
  929 0319 03       		.byte	0x3
@@ -1437,10 +1438,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  980 036d 44       		.sleb128 -60
  981 036e 00       		.byte	0
  982 036f 0F       		.uleb128 0xf
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 25
+
+
  983 0370 86000000 		.4byte	.LVL21
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 25
-
-
  984 0374 20060000 		.4byte	0x620
  985 0378 86030000 		.4byte	0x386
  986 037c 10       		.uleb128 0x10
@@ -1497,10 +1498,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1037 03d0 01       		.uleb128 0x1
  1038 03d1 51       		.byte	0x51
  1039 03d2 05       		.uleb128 0x5
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 26
+
+
  1040 03d3 03       		.byte	0x3
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 26
-
-
  1041 03d4 F0000000 		.4byte	.LC6
  1042 03d8 00       		.byte	0
  1043 03d9 0F       		.uleb128 0xf
@@ -1557,10 +1558,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1094 0433 02       		.uleb128 0x2
  1095 0434 91       		.byte	0x91
  1096 0435 44       		.sleb128 -60
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 27
+
+
  1097 0436 10       		.uleb128 0x10
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 27
-
-
  1098 0437 01       		.uleb128 0x1
  1099 0438 51       		.byte	0x51
  1100 0439 05       		.uleb128 0x5
@@ -1617,10 +1618,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1151 0493 A7040000 		.4byte	0x4a7
  1152 0497 10       		.uleb128 0x10
  1153 0498 01       		.uleb128 0x1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 28
+
+
  1154 0499 50       		.byte	0x50
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 28
-
-
  1155 049a 02       		.uleb128 0x2
  1156 049b 91       		.byte	0x91
  1157 049c 44       		.sleb128 -60
@@ -1677,10 +1678,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1208 04f0 00       		.byte	0
  1209 04f1 0F       		.uleb128 0xf
  1210 04f2 28010000 		.4byte	.LVL46
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 29
+
+
  1211 04f6 4C060000 		.4byte	0x64c
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 29
-
-
  1212 04fa 10050000 		.4byte	0x510
  1213 04fe 10       		.uleb128 0x10
  1214 04ff 01       		.uleb128 0x1
@@ -1737,10 +1738,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1265 0550 50       		.byte	0x50
  1266 0551 05       		.uleb128 0x5
  1267 0552 03       		.byte	0x3
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 30
+
+
  1268 0553 BC010000 		.4byte	.LC10
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 30
-
-
  1269 0557 00       		.byte	0
  1270 0558 12       		.uleb128 0x12
  1271 0559 5C010000 		.4byte	.LVL53
@@ -1797,10 +1798,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1322 05b1 10       		.uleb128 0x10
  1323 05b2 01       		.uleb128 0x1
  1324 05b3 51       		.byte	0x51
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 31
+
+
  1325 05b4 01       		.uleb128 0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 31
-
-
  1326 05b5 3E       		.byte	0x3e
  1327 05b6 00       		.byte	0
  1328 05b7 00       		.byte	0
@@ -1857,10 +1858,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1379 062a 8B       		.byte	0x8b
  1380 062b 17       		.uleb128 0x17
  1381 062c 07020000 		.4byte	.LASF48
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 32
+
+
  1382 0630 07020000 		.4byte	.LASF48
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 32
-
-
  1383 0634 08       		.byte	0x8
  1384 0635 17       		.byte	0x17
  1385 0636 17       		.uleb128 0x17
@@ -1917,10 +1918,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1436 0003 25       		.uleb128 0x25
  1437 0004 0E       		.uleb128 0xe
  1438 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 33
+
+
  1439 0006 0B       		.uleb128 0xb
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 33
-
-
  1440 0007 03       		.uleb128 0x3
  1441 0008 0E       		.uleb128 0xe
  1442 0009 1B       		.uleb128 0x1b
@@ -1977,10 +1978,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1493 003c 0B       		.uleb128 0xb
  1494 003d 3B       		.uleb128 0x3b
  1495 003e 05       		.uleb128 0x5
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 34
+
+
  1496 003f 49       		.uleb128 0x49
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 34
-
-
  1497 0040 13       		.uleb128 0x13
  1498 0041 00       		.byte	0
  1499 0042 00       		.byte	0
@@ -2037,10 +2038,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1550 0076 12       		.uleb128 0x12
  1551 0077 06       		.uleb128 0x6
  1552 0078 40       		.uleb128 0x40
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 35
+
+
  1553 0079 18       		.uleb128 0x18
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 35
-
-
  1554 007a 9642     		.uleb128 0x2116
  1555 007c 19       		.uleb128 0x19
  1556 007d 01       		.uleb128 0x1
@@ -2097,10 +2098,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1607 00b0 01       		.byte	0x1
  1608 00b1 11       		.uleb128 0x11
  1609 00b2 01       		.uleb128 0x1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 36
+
+
  1610 00b3 12       		.uleb128 0x12
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 36
-
-
  1611 00b4 06       		.uleb128 0x6
  1612 00b5 01       		.uleb128 0x1
  1613 00b6 13       		.uleb128 0x13
@@ -2157,10 +2158,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1664 00f2 01       		.uleb128 0x1
  1665 00f3 31       		.uleb128 0x31
  1666 00f4 13       		.uleb128 0x13
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 37
+
+
  1667 00f5 00       		.byte	0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 37
-
-
  1668 00f6 00       		.byte	0
  1669 00f7 13       		.uleb128 0x13
  1670 00f8 01       		.uleb128 0x1
@@ -2217,10 +2218,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1721 012b 17       		.uleb128 0x17
  1722 012c 2E       		.uleb128 0x2e
  1723 012d 00       		.byte	0
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 38
+
+
  1724 012e 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 38
-
-
  1725 012f 19       		.uleb128 0x19
  1726 0130 3C       		.uleb128 0x3c
  1727 0131 19       		.uleb128 0x19
@@ -2277,10 +2278,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1778 0063 08010000 		.4byte	.LVL41
  1779 0067 0A010000 		.4byte	.LVL42
  1780 006b 0100     		.2byte	0x1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 39
+
+
  1781 006d 50       		.byte	0x50
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 39
-
-
  1782 006e 28010000 		.4byte	.LVL46
  1783 0072 32010000 		.4byte	.LVL47
  1784 0076 0100     		.2byte	0x1
@@ -2337,10 +2338,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1835 00d4 EC010000 		.4byte	.LVL70
  1836 00d8 0900     		.2byte	0x9
  1837 00da 70       		.byte	0x70
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 40
+
+
  1838 00db 00       		.sleb128 0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 40
-
-
  1839 00dc 09       		.byte	0x9
  1840 00dd F4       		.byte	0xf4
  1841 00de 24       		.byte	0x24
@@ -2397,10 +2398,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1892 012d 1A       		.byte	0x1a
  1893 012e 38       		.byte	0x38
  1894 012f 24       		.byte	0x24
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 41
+
+
  1895 0130 73       		.byte	0x73
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 41
-
-
  1896 0131 00       		.sleb128 0
  1897 0132 21       		.byte	0x21
  1898 0133 09       		.byte	0x9
@@ -2457,10 +2458,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1949              	.LLST10:
  1950 01b4 14000000 		.4byte	.LVL2
  1951 01b8 18000000 		.4byte	.LVL3
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 42
+
+
  1952 01bc 0200     		.2byte	0x2
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 42
-
-
  1953 01be 30       		.byte	0x30
  1954 01bf 9F       		.byte	0x9f
  1955 01c0 18000000 		.4byte	.LVL3
@@ -2489,7 +2490,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1978 000c 00000000 		.4byte	0
  1979              		.section	.debug_line,"",%progbits
  1980              	.Ldebug_line0:
- 1981 0000 9D020000 		.section	.debug_str,"MS",%progbits,1
+ 1981 0000 9F020000 		.section	.debug_str,"MS",%progbits,1
  1981      02002802 
  1981      00000201 
  1981      FB0E0D00 
@@ -2517,10 +2518,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  1991      52524F52 
  1991      00
  1992              	.LASF16:
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 43
+
+
  1993 003b 666C6F61 		.ascii	"float32\000"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 43
-
-
  1993      74333200 
  1994              	.LASF2:
  1995 0043 73686F72 		.ascii	"short int\000"
@@ -2577,10 +2578,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  2019 00e7 4F757459 		.ascii	"OutY_converted\000"
  2019      5F636F6E 
  2019      76657274 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 44
+
+
  2019      656400
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 44
-
-
  2020              	.LASF17:
  2021 00f6 666C6F61 		.ascii	"float\000"
  2021      7400
@@ -2637,10 +2638,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  2045      616C5F52 
  2045      65616452 
  2046              	.LASF9:
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 45
+
+
  2047 019a 6C6F6E67 		.ascii	"long long unsigned int\000"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 45
-
-
  2047      206C6F6E 
  2047      6720756E 
  2047      7369676E 
@@ -2697,10 +2698,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  2064      37373135 
  2065 0295 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
  2065      66756E63 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 46
+
+
  2065      74696F6E 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 46
-
-
  2065      2D736563 
  2065      74696F6E 
  2066              	.LASF19:
@@ -2757,10 +2758,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 1
  2092      6C657261 
  2092      74696F6E 
  2092      44617461 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 47
+
+
  2092      00
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccvdIi5g.s 			page 47
-
-
  2093              	.LASF49:
  2094 037b 55415254 		.ascii	"UART_Debug_Start\000"
  2094      5F446562 

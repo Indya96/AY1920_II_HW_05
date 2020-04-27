@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
   28:main.c        **** #define LIS3DH_STATUS_REG 0x27
   29:main.c        **** 
   30:main.c        **** /**
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 2
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 2
 
 
   31:main.c        **** *   \X, Y and Z axis new data available
@@ -73,7 +73,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
   40:main.c        **** 
   41:main.c        **** /**
   42:main.c        **** *   \brief Hex value to set the accelerometer to output 3-axis
-  43:main.c        ****      acceleration data at 100Hz 
+  43:main.c        ****      acceleration data in normal mode at 100Hz 
   44:main.c        **** */
   45:main.c        **** #define LIS3DH_CTRL_REG1_SET 0x57
   46:main.c        **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
   70:main.c        **** 
   71:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
   72:main.c        ****     I2C_Peripheral_Start();
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 3
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 3
 
 
   43              		.loc 1 72 0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
   81:main.c        ****     {
   81              		.loc 1 81 0 is_stmt 0 discriminator 1
   82 0032 7F2C     		cmp	r4, #127
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 4
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 4
 
 
   83 0034 F0DD     		ble	.L4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  108 0058 6548     		ldr	r0, .L21+8
  109              	.LVL13:
  110 005a FFF7FEFF 		bl	UART_Debug_PutString
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 5
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 5
 
 
  111              	.LVL14:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  141:main.c        ****         
  142:main.c        ****     UART_Debug_PutString("\r\nWriting new values..\r\n");
  141              		.loc 1 142 0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 6
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 6
 
 
  142 0086 5D48     		ldr	r0, .L21+20
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  160:main.c        ****         }
  161:main.c        ****     }
  162:main.c        ****     
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 7
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 7
 
 
  163:main.c        ****     /******************************************/
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  189:main.c        **** 
  190:main.c        ****     error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
  207              		.loc 1 190 0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 8
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 8
 
 
  208 00e6 0DF11102 		add	r2, sp, #17
@@ -462,7 +462,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  202:main.c        ****     }
  203:main.c        ****     
  204:main.c        ****     
- 205:main.c        ****     ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; // must be changed to the appropriate value
+ 205:main.c        ****     ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; 
  235              		.loc 1 205 0
  236 010e 8022     		movs	r2, #128
  237 0110 12AC     		add	r4, sp, #72
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  208:main.c        ****                                          LIS3DH_CTRL_REG4,
  209:main.c        ****                                          ctrl_reg4);
  210:main.c        ****     
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 9
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 9
 
 
  211:main.c        ****     error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  273              		.loc 1 236 0
  274 0144 A023     		movs	r3, #160
  275 0146 8DF80830 		strb	r3, [sp, #8]
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 10
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 10
 
 
  237:main.c        ****     OutArray[7] = footer;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  262:main.c        ****             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
  305              		.loc 1 262 0
  306 0176 6B46     		mov	r3, sp
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 11
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 11
 
 
  307 0178 0622     		movs	r2, #6
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  336              		.loc 1 287 0
  337 01b6 C3F30723 		ubfx	r3, r3, #8, #8
  338              	.LVL61:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 12
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 12
 
 
  339 01ba 8DF80C30 		strb	r3, [sp, #12]
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  382              		.align	2
  383              	.LC0:
  384 0000 44657669 		.ascii	"Device 0x%02X is connected\015\012\000"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 13
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 13
 
 
  384      63652030 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  407      72206F63 
  407      63757272 
  407      65642064 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 14
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 14
 
 
  407      7572696E 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  443 000a 04       		.byte	0x4
  444 000b 01       		.uleb128 0x1
  445 000c 01010000 		.4byte	.LASF52
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 15
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 15
 
 
  446 0010 0C       		.byte	0xc
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  500 007f 04       		.byte	0x4
  501 0080 05       		.byte	0x5
  502 0081 696E7400 		.ascii	"int\000"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 16
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 16
 
 
  503 0085 02       		.uleb128 0x2
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  557 00f6 01       		.byte	0x1
  558 00f7 00       		.byte	0
  559 00f8 03       		.uleb128 0x3
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 17
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 17
 
 
  560 00f9 C7000000 		.4byte	.LASF22
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  614 0168 01       		.byte	0x1
  615 0169 BC       		.byte	0xbc
  616 016a 8C000000 		.4byte	0x8c
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 18
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 18
 
 
  617 016e 02       		.uleb128 0x2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  671 01e3 6900     		.ascii	"i\000"
  672 01e5 01       		.byte	0x1
  673 01e6 51       		.byte	0x51
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 19
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 19
 
 
  674 01e7 7E000000 		.4byte	0x7e
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  728 024a 14000000 		.4byte	.LVL2
  729 024e E5050000 		.4byte	0x5e5
  730 0252 5C020000 		.4byte	0x25c
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 20
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 20
 
 
  731 0256 10       		.uleb128 0x10
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  785 02aa 44       		.sleb128 -60
  786 02ab 00       		.byte	0
  787 02ac 0F       		.uleb128 0xf
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 21
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 21
 
 
  788 02ad 5E000000 		.4byte	.LVL14
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  842 030d 01       		.uleb128 0x1
  843 030e 50       		.byte	0x50
  844 030f 02       		.uleb128 0x2
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 22
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 22
 
 
  845 0310 91       		.byte	0x91
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  899 0370 02       		.uleb128 0x2
  900 0371 91       		.byte	0x91
  901 0372 44       		.sleb128 -60
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 23
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 23
 
 
  902 0373 10       		.uleb128 0x10
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  956 03d0 E4030000 		.4byte	0x3e4
  957 03d4 10       		.uleb128 0x10
  958 03d5 01       		.uleb128 0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 24
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 24
 
 
  959 03d6 50       		.byte	0x50
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1013 042d 00       		.byte	0
  1014 042e 0F       		.uleb128 0xf
  1015 042f 00010000 		.4byte	.LVL39
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 25
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 25
 
 
  1016 0433 B9050000 		.4byte	0x5b9
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1070 0490 52       		.byte	0x52
  1071 0491 02       		.uleb128 0x2
  1072 0492 09       		.byte	0x9
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 26
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 26
 
 
  1073 0493 80       		.byte	0x80
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1127 04ea C4050000 		.4byte	0x5c4
  1128 04ee FC040000 		.4byte	0x4fc
  1129 04f2 10       		.uleb128 0x10
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 27
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 27
 
 
  1130 04f3 01       		.uleb128 0x1
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1184 0550 50       		.byte	0x50
  1185 0551 03       		.uleb128 0x3
  1186 0552 91       		.byte	0x91
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 28
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 28
 
 
  1187 0553 B87F     		.sleb128 -72
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1241 05c4 17       		.uleb128 0x17
  1242 05c5 19000000 		.4byte	.LASF41
  1243 05c9 19000000 		.4byte	.LASF41
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 29
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 29
 
 
  1244 05cd 0A       		.byte	0xa
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1298              	.Ldebug_abbrev0:
  1299 0000 01       		.uleb128 0x1
  1300 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 30
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 30
 
 
  1301 0002 01       		.byte	0x1
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1355 0038 00       		.byte	0
  1356 0039 03       		.uleb128 0x3
  1357 003a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 31
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 31
 
 
  1358 003b 3A       		.uleb128 0x3a
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1412 0071 8701     		.uleb128 0x87
  1413 0073 19       		.uleb128 0x19
  1414 0074 11       		.uleb128 0x11
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 32
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 32
 
 
  1415 0075 01       		.uleb128 0x1
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1469 00ac 00       		.byte	0
  1470 00ad 00       		.byte	0
  1471 00ae 0D       		.uleb128 0xd
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 33
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 33
 
 
  1472 00af 0B       		.uleb128 0xb
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1526 00ec 12       		.uleb128 0x12
  1527 00ed 898201   		.uleb128 0x4109
  1528 00f0 00       		.byte	0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 34
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 34
 
 
  1529 00f1 11       		.uleb128 0x11
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1583 0127 3C       		.uleb128 0x3c
  1584 0128 19       		.uleb128 0x19
  1585 0129 00       		.byte	0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 35
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 35
 
 
  1586 012a 00       		.byte	0
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1640 0058 F2000000 		.4byte	.LVL37
  1641 005c FC000000 		.4byte	.LVL38
  1642 0060 0100     		.2byte	0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 36
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 36
 
 
  1643 0062 50       		.byte	0x50
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1697 00cf FF       		.byte	0xff
  1698 00d0 1A       		.byte	0x1a
  1699 00d1 38       		.byte	0x38
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 37
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 37
 
 
  1700 00d2 24       		.byte	0x24
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1754 0124 1A       		.byte	0x1a
  1755 0125 38       		.byte	0x38
  1756 0126 24       		.byte	0x24
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 38
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 38
 
 
  1757 0127 91       		.byte	0x91
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1811 0184 0100     		.2byte	0x1
  1812 0186 54       		.byte	0x54
  1813 0187 00000000 		.4byte	0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 39
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 39
 
 
  1814 018b 00000000 		.4byte	0
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1849      20696E74 
  1849      00
  1850              	.LASF54:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 40
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 40
 
 
  1851 0062 433A5C55 		.ascii	"C:\\Users\\indya\\Desktop\\AY1920_II_HW_05_CERONI_I"
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1870      74696F6E 
  1871              	.LASF16:
  1872 018f 696E7431 		.ascii	"int16\000"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 41
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 41
 
 
  1872      3600
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1897              	.LASF11:
  1898 0241 756E7369 		.ascii	"unsigned int\000"
  1898      676E6564 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 42
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 42
 
 
  1898      20696E74 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 1
  1926      50657269 
  1926      70686572 
  1926      616C5F52 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\cc4of7Tg.s 			page 43
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccH3Jdhp.s 			page 43
 
 
  1926      65616452 
