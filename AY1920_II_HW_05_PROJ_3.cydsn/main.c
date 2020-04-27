@@ -253,7 +253,10 @@ int main(void)
     
     isr_StartEx(custom_TIMER_ISR);
     
+    
+    
     while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
+    Timer_WriteCounter(5);
     Timer_Start();
     
     
@@ -268,7 +271,7 @@ int main(void)
         
             timer_flag=0;
             
-            //Multiwrite to read all the output registers
+            //Multiread to read all the output registers
             
             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
                                             LIS3DH_OUT_X_L,6,
@@ -282,11 +285,11 @@ int main(void)
                 
                 
                 //the range is between -4G and +4G so the sensitivity is 2mG/digit
-                //to obtain the value in mm/s^2 we multiply also for G (=9.81)
+                //to obtain the value in mm/s^2 I multiply for the sensitivity and also for 9.81
                 
-                OutX_converted= ((float32)OutX)*2*9.81 +0.5; //value in mm/s^2 rounded
+                OutX_converted= ((float32)OutX)*2*9.81; //value in mm/s^2 
                 
-                OutX_rounded= (int32)OutX_converted;  
+                OutX_rounded= (int32)(OutX_converted +0.5);  //value in mm/s^2 rounded
                                               
                 
                 OutArray[1] = (uint8_t)(OutX_rounded & 0xFF); //LSB
@@ -297,9 +300,9 @@ int main(void)
                 
                 OutY = (int16)((AccelerationData[2] | (AccelerationData[3]<<8)))>>4;
                 
-                OutY_converted= (float32) ((float32)OutY) *2*9.81 +0.5; 
+                OutY_converted= (float32) ((float32)OutY) *2*9.81; 
                 
-                OutY_rounded= (int32)OutY_converted ;
+                OutY_rounded= (int32)(OutY_converted + 0.5);
                                               
                 
                 OutArray[5] = (uint8_t)(OutY_rounded & 0xFF); 
@@ -309,9 +312,9 @@ int main(void)
                 
                 OutZ = (int16)((AccelerationData[4] | (AccelerationData[5]<<8)))>>4;
                 
-                OutZ_converted= ((float32)OutZ)*2*9.81 + 0.5; 
+                OutZ_converted= ((float32)OutZ)*2*9.81; 
                 
-                OutZ_rounded= (int32)OutZ_converted ;
+                OutZ_rounded= (int32)(OutZ_converted + 0.5);
                                               
                 
                 OutArray[9] = (uint8_t)(OutZ_rounded & 0xFF); 
