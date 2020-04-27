@@ -241,6 +241,8 @@ int main(void)
     
     isr_StartEx(custom_TIMER_ISR);
     while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
+    
+    Timer_WriteCounter(5);
     Timer_Start();
     
     
@@ -264,11 +266,11 @@ int main(void)
         
             if(error == NO_ERROR)
             {
-                //cast to a right-justified int16
+                //cast to int: I obtain the value in digit
 
                 OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)))>>4;  
                 
-                //the sensitivity is 1mG/digit
+                //the sensitivity is 1mG/digit so the value in digit is equal to the value in mG
                 //the range is between -2G and +2G so we need to represent 4000 numbers
                 //to represent 4000 numbers we need 12 bits 
                 //so to right justify the 16 bits int we need to shift it of 4 bits

@@ -280,11 +280,13 @@ int main(void)
         
             if(error == NO_ERROR)
             {
-                //cast to int16: I obtain the value in mG
+                //cast to int: I obtain the value in digit
                 OutX = (int16)((AccelerationData[0] | (AccelerationData[1]<<8)))>>4;
                 
                 
-                //the range is between -4G and +4G so the sensitivity is 2mG/digit
+                //the range is between -4G and +4G and the sensitivity is 2mG/digit
+                //I need to represent 4000 numbers and so I need 12 bits
+                //so to right allign the 16-bit int I need to shift it of 4 bits  
                 //to obtain the value in mm/s^2 I multiply for the sensitivity and also for 9.81
                 
                 OutX_converted= ((float32)OutX)*2*9.81; //value in mm/s^2 
