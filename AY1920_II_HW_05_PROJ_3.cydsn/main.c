@@ -256,7 +256,7 @@ int main(void)
     
     
     while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
-    Timer_WriteCounter(5);
+    Timer_WriteCounter(95);
     Timer_Start();
     
     

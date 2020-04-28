@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
   21:main.c        **** */
   22:main.c        **** #define LIS3DH_DEVICE_ADDRESS 0x18
   23:main.c        **** 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 2
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 2
 
 
   24:main.c        **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
   41              		.cfi_offset 4, -8
   42              		.cfi_offset 14, -4
   43 0002 94B0     		sub	sp, sp, #80
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 3
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 3
 
 
   44              		.cfi_def_cfa_offset 88
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
   79              		.loc 1 90 0
   80 002a 07A8     		add	r0, sp, #28
   81 002c FFF7FEFF 		bl	UART_Debug_PutString
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 4
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 4
 
 
   82              	.LVL6:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  109 0052 FFF7FEFF 		bl	UART_Debug_PutString
  110              	.LVL11:
  111 0056 02E0     		b	.L6
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 5
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 5
 
 
  112              	.LVL12:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  144              	.LVL20:
  145 0082 FFF7FEFF 		bl	UART_Debug_PutString
  146              	.LVL21:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 6
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 6
 
 
  147              	.L8:
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  159:main.c        ****         }
  160:main.c        ****         else
  161:main.c        ****         {
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 7
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 7
 
 
  162:main.c        ****             UART_Debug_PutString("Error occurred during I2C comm to set control register 1\r\n");  
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  182:main.c        ****     }
  183:main.c        ****     
  184:main.c        ****     
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 8
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 8
 
 
  185:main.c        ****     /******************************************/
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  244 0110 14AC     		add	r4, sp, #80
  245              	.LVL44:
  246 0112 04F8372D 		strb	r2, [r4, #-55]!
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 9
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 9
 
 
  209:main.c        ****     
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  230:main.c        ****     int16 OutY;
  231:main.c        ****     int16 OutZ;
  232:main.c        ****     
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 10
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 10
 
 
  233:main.c        ****     
@@ -581,9 +581,9 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  256:main.c        ****     
  257:main.c        ****     
  258:main.c        ****     while(!(LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_DATA_AVAILABLE)){}
- 259:main.c        ****     Timer_WriteCounter(5);
+ 259:main.c        ****     Timer_WriteCounter(95);
  294              		.loc 1 259 0
- 295 015c 0520     		movs	r0, #5
+ 295 015c 5F20     		movs	r0, #95
  296 015e FFF7FEFF 		bl	Timer_WriteCounter
  297              	.LVL54:
  260:main.c        ****     Timer_Start();
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  265:main.c        ****         if(timer_flag==1)  //every 10 ms
  302              		.loc 1 265 0
  303 0166 5A4B     		ldr	r3, .L21+56
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 11
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 11
 
 
  304 0168 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  330              	.LVL59:
  331 0196 FFF7FEFF 		bl	__aeabi_i2f
  332              	.LVL60:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 12
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 12
 
 
  333 019a 0146     		mov	r1, r0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  374              	.LVL71:
  375 01f0 0146     		mov	r1, r0
  376 01f2 FFF7FEFF 		bl	__aeabi_fadd
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 13
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 13
 
 
  377              	.LVL72:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  419              	.LVL83:
  420 024c FFF7FEFF 		bl	__aeabi_f2d
  421              	.LVL84:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 14
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 14
 
 
  422 0250 11A3     		adr	r3, .L21
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  463 02ac 78000000 		.word	.LC3
  464 02b0 98000000 		.word	.LC4
  465 02b4 D4000000 		.word	.LC5
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 15
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 15
 
 
  466 02b8 F0000000 		.word	.LC6
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  497              	.LC5:
  498 00d4 0D0A5772 		.ascii	"\015\012Writing new values..\015\012\000"
  498      6974696E 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 16
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 16
 
 
  498      67206E65 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  524              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  525              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.3\\psoc creator\\import\\gnu\\arm\\5.4.
  526              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 17
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 17
 
 
  527              		.file 5 "ErrorCodes.h"
@@ -972,7 +972,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  535              		.file 13 "Generated_Source\\PSoC5/Timer.h"
  536              		.section	.debug_info,"",%progbits
  537              	.Ldebug_info0:
- 538 0000 96060000 		.4byte	0x696
+ 538 0000 97060000 		.4byte	0x697
  539 0004 0400     		.2byte	0x4
  540 0006 00000000 		.4byte	.Ldebug_abbrev0
  541 000a 04       		.byte	0x4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  581 005f 04       		.byte	0x4
  582 0060 07       		.byte	0x7
  583 0061 E8010000 		.4byte	.LASF7
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 18
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 18
 
 
  584 0065 02       		.uleb128 0x2
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  638 00d5 02       		.uleb128 0x2
  639 00d6 01       		.byte	0x1
  640 00d7 08       		.byte	0x8
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 19
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 19
 
 
  641 00d8 BD020000 		.4byte	.LASF19
@@ -1119,12 +1119,12 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  676 0122 DC020000 		.4byte	.LFE64-.LFB64
  677 0126 01       		.uleb128 0x1
  678 0127 9C       		.byte	0x9c
- 679 0128 B8050000 		.4byte	0x5b8
+ 679 0128 B9050000 		.4byte	0x5b9
  680 012c 0A       		.uleb128 0xa
  681 012d 37030000 		.4byte	.LASF25
  682 0131 01       		.byte	0x1
  683 0132 51       		.byte	0x51
- 684 0133 B8050000 		.4byte	0x5b8
+ 684 0133 B9050000 		.4byte	0x5b9
  685 0137 02       		.uleb128 0x2
  686 0138 91       		.byte	0x91
  687 0139 44       		.sleb128 -60
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  695 014a D7000000 		.4byte	.LASF27
  696 014e 01       		.byte	0x1
  697 014f 6B       		.byte	0x6b
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 20
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 20
 
 
  698 0150 81000000 		.4byte	0x81
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  752 01c5 BB000000 		.4byte	0xbb
  753 01c9 68010000 		.4byte	.LLST6
  754 01cd 0B       		.uleb128 0xb
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 21
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 21
 
 
  755 01ce 60010000 		.4byte	.LASF36
@@ -1234,7 +1234,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  785 0214 29000000 		.4byte	.LASF41
  786 0218 01       		.byte	0x1
  787 0219 F5       		.byte	0xf5
- 788 021a C8050000 		.4byte	0x5c8
+ 788 021a C9050000 		.4byte	0x5c9
  789 021e 03       		.uleb128 0x3
  790 021f 91       		.byte	0x91
  791 0220 B07F     		.sleb128 -80
@@ -1242,7 +1242,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  793 0223 6A030000 		.4byte	.LASF42
  794 0227 01       		.byte	0x1
  795 0228 F6       		.byte	0xf6
- 796 0229 D8050000 		.4byte	0x5d8
+ 796 0229 D9050000 		.4byte	0x5d9
  797 022d 03       		.uleb128 0x3
  798 022e 91       		.byte	0x91
  799 022f A87F     		.sleb128 -88
@@ -1258,10 +1258,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  809 0247 B4010000 		.4byte	.LLST10
  810 024b 0F       		.uleb128 0xf
  811 024c 1E000000 		.4byte	.LVL4
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 22
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 22
 
 
- 812 0250 0A060000 		.4byte	0x60a
+ 812 0250 0B060000 		.4byte	0x60b
  813 0254 5F020000 		.4byte	0x25f
  814 0258 10       		.uleb128 0x10
  815 0259 01       		.uleb128 0x1
@@ -1272,7 +1272,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  820 025e 00       		.byte	0
  821 025f 0F       		.uleb128 0xf
  822 0260 2A000000 		.4byte	.LVL5
- 823 0264 15060000 		.4byte	0x615
+ 823 0264 16060000 		.4byte	0x616
  824 0268 82020000 		.4byte	0x282
  825 026c 10       		.uleb128 0x10
  826 026d 01       		.uleb128 0x1
@@ -1295,7 +1295,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  843 0281 00       		.byte	0
  844 0282 11       		.uleb128 0x11
  845 0283 30000000 		.4byte	.LVL6
- 846 0287 20060000 		.4byte	0x620
+ 846 0287 21060000 		.4byte	0x621
  847 028b 10       		.uleb128 0x10
  848 028c 01       		.uleb128 0x1
  849 028d 50       		.byte	0x50
@@ -1306,26 +1306,26 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  854 0292 00       		.byte	0
  855 0293 12       		.uleb128 0x12
  856 0294 0A000000 		.4byte	.LVL0
- 857 0298 2B060000 		.4byte	0x62b
+ 857 0298 2C060000 		.4byte	0x62c
  858 029c 12       		.uleb128 0x12
  859 029d 0E000000 		.4byte	.LVL1
- 860 02a1 36060000 		.4byte	0x636
+ 860 02a1 37060000 		.4byte	0x637
  861 02a5 0F       		.uleb128 0xf
  862 02a6 14000000 		.4byte	.LVL2
- 863 02aa 41060000 		.4byte	0x641
+ 863 02aa 42060000 		.4byte	0x642
  864 02ae B8020000 		.4byte	0x2b8
  865 02b2 10       		.uleb128 0x10
  866 02b3 01       		.uleb128 0x1
  867 02b4 50       		.byte	0x50
  868 02b5 01       		.uleb128 0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 23
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 23
 
 
  869 02b6 35       		.byte	0x35
  870 02b7 00       		.byte	0
  871 02b8 0F       		.uleb128 0xf
  872 02b9 42000000 		.4byte	.LVL8
- 873 02bd 4C060000 		.4byte	0x64c
+ 873 02bd 4D060000 		.4byte	0x64d
  874 02c1 D7020000 		.4byte	0x2d7
  875 02c5 10       		.uleb128 0x10
  876 02c6 01       		.uleb128 0x1
@@ -1347,7 +1347,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  892 02d6 00       		.byte	0
  893 02d7 0F       		.uleb128 0xf
  894 02d8 50000000 		.4byte	.LVL10
- 895 02dc 15060000 		.4byte	0x615
+ 895 02dc 16060000 		.4byte	0x616
  896 02e0 F4020000 		.4byte	0x2f4
  897 02e4 10       		.uleb128 0x10
  898 02e5 01       		.uleb128 0x1
@@ -1364,7 +1364,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  909 02f3 00       		.byte	0
  910 02f4 0F       		.uleb128 0xf
  911 02f5 56000000 		.4byte	.LVL11
- 912 02f9 20060000 		.4byte	0x620
+ 912 02f9 21060000 		.4byte	0x621
  913 02fd 08030000 		.4byte	0x308
  914 0301 10       		.uleb128 0x10
  915 0302 01       		.uleb128 0x1
@@ -1375,10 +1375,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  920 0307 00       		.byte	0
  921 0308 0F       		.uleb128 0xf
  922 0309 5E000000 		.4byte	.LVL14
- 923 030d 20060000 		.4byte	0x620
+ 923 030d 21060000 		.4byte	0x621
  924 0311 1F030000 		.4byte	0x31f
  925 0315 10       		.uleb128 0x10
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 24
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 24
 
 
  926 0316 01       		.uleb128 0x1
@@ -1389,7 +1389,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  931 031e 00       		.byte	0
  932 031f 0F       		.uleb128 0xf
  933 0320 6A000000 		.4byte	.LVL15
- 934 0324 4C060000 		.4byte	0x64c
+ 934 0324 4D060000 		.4byte	0x64d
  935 0328 3E030000 		.4byte	0x33e
  936 032c 10       		.uleb128 0x10
  937 032d 01       		.uleb128 0x1
@@ -1411,7 +1411,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  953 033d 00       		.byte	0
  954 033e 0F       		.uleb128 0xf
  955 033f 78000000 		.4byte	.LVL17
- 956 0343 15060000 		.4byte	0x615
+ 956 0343 16060000 		.4byte	0x616
  957 0347 5B030000 		.4byte	0x35b
  958 034b 10       		.uleb128 0x10
  959 034c 01       		.uleb128 0x1
@@ -1428,7 +1428,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  970 035a 00       		.byte	0
  971 035b 0F       		.uleb128 0xf
  972 035c 7E000000 		.4byte	.LVL18
- 973 0360 20060000 		.4byte	0x620
+ 973 0360 21060000 		.4byte	0x621
  974 0364 6F030000 		.4byte	0x36f
  975 0368 10       		.uleb128 0x10
  976 0369 01       		.uleb128 0x1
@@ -1438,11 +1438,11 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  980 036d 44       		.sleb128 -60
  981 036e 00       		.byte	0
  982 036f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 25
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 25
 
 
  983 0370 86000000 		.4byte	.LVL21
- 984 0374 20060000 		.4byte	0x620
+ 984 0374 21060000 		.4byte	0x621
  985 0378 86030000 		.4byte	0x386
  986 037c 10       		.uleb128 0x10
  987 037d 01       		.uleb128 0x1
@@ -1453,7 +1453,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  992 0385 00       		.byte	0
  993 0386 0F       		.uleb128 0xf
  994 0387 8C000000 		.4byte	.LVL22
- 995 038b 20060000 		.4byte	0x620
+ 995 038b 21060000 		.4byte	0x621
  996 038f 9D030000 		.4byte	0x39d
  997 0393 10       		.uleb128 0x10
  998 0394 01       		.uleb128 0x1
@@ -1464,7 +1464,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1003 039c 00       		.byte	0
  1004 039d 0F       		.uleb128 0xf
  1005 039e A2000000 		.4byte	.LVL23
- 1006 03a2 57060000 		.4byte	0x657
+ 1006 03a2 58060000 		.4byte	0x658
  1007 03a6 BC030000 		.4byte	0x3bc
  1008 03aa 10       		.uleb128 0x10
  1009 03ab 01       		.uleb128 0x1
@@ -1486,7 +1486,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1025 03bb 00       		.byte	0
  1026 03bc 0F       		.uleb128 0xf
  1027 03bd B0000000 		.4byte	.LVL25
- 1028 03c1 15060000 		.4byte	0x615
+ 1028 03c1 16060000 		.4byte	0x616
  1029 03c5 D9030000 		.4byte	0x3d9
  1030 03c9 10       		.uleb128 0x10
  1031 03ca 01       		.uleb128 0x1
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1037 03d0 01       		.uleb128 0x1
  1038 03d1 51       		.byte	0x51
  1039 03d2 05       		.uleb128 0x5
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 26
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 26
 
 
  1040 03d3 03       		.byte	0x3
@@ -1506,7 +1506,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1042 03d8 00       		.byte	0
  1043 03d9 0F       		.uleb128 0xf
  1044 03da B6000000 		.4byte	.LVL26
- 1045 03de 20060000 		.4byte	0x620
+ 1045 03de 21060000 		.4byte	0x621
  1046 03e2 ED030000 		.4byte	0x3ed
  1047 03e6 10       		.uleb128 0x10
  1048 03e7 01       		.uleb128 0x1
@@ -1517,7 +1517,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1053 03ec 00       		.byte	0
  1054 03ed 0F       		.uleb128 0xf
  1055 03ee BE000000 		.4byte	.LVL29
- 1056 03f2 20060000 		.4byte	0x620
+ 1056 03f2 21060000 		.4byte	0x621
  1057 03f6 04040000 		.4byte	0x404
  1058 03fa 10       		.uleb128 0x10
  1059 03fb 01       		.uleb128 0x1
@@ -1528,7 +1528,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1064 0403 00       		.byte	0
  1065 0404 0F       		.uleb128 0xf
  1066 0405 CA000000 		.4byte	.LVL30
- 1067 0409 4C060000 		.4byte	0x64c
+ 1067 0409 4D060000 		.4byte	0x64d
  1068 040d 23040000 		.4byte	0x423
  1069 0411 10       		.uleb128 0x10
  1070 0412 01       		.uleb128 0x1
@@ -1550,7 +1550,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1086 0422 00       		.byte	0
  1087 0423 0F       		.uleb128 0xf
  1088 0424 D8000000 		.4byte	.LVL32
- 1089 0428 15060000 		.4byte	0x615
+ 1089 0428 16060000 		.4byte	0x616
  1090 042c 40040000 		.4byte	0x440
  1091 0430 10       		.uleb128 0x10
  1092 0431 01       		.uleb128 0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1094 0433 02       		.uleb128 0x2
  1095 0434 91       		.byte	0x91
  1096 0435 44       		.sleb128 -60
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 27
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 27
 
 
  1097 0436 10       		.uleb128 0x10
@@ -1570,7 +1570,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1103 043f 00       		.byte	0
  1104 0440 0F       		.uleb128 0xf
  1105 0441 DE000000 		.4byte	.LVL33
- 1106 0445 20060000 		.4byte	0x620
+ 1106 0445 21060000 		.4byte	0x621
  1107 0449 54040000 		.4byte	0x454
  1108 044d 10       		.uleb128 0x10
  1109 044e 01       		.uleb128 0x1
@@ -1581,7 +1581,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1114 0453 00       		.byte	0
  1115 0454 0F       		.uleb128 0xf
  1116 0455 E6000000 		.4byte	.LVL36
- 1117 0459 20060000 		.4byte	0x620
+ 1117 0459 21060000 		.4byte	0x621
  1118 045d 6B040000 		.4byte	0x46b
  1119 0461 10       		.uleb128 0x10
  1120 0462 01       		.uleb128 0x1
@@ -1592,7 +1592,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1125 046a 00       		.byte	0
  1126 046b 0F       		.uleb128 0xf
  1127 046c F2000000 		.4byte	.LVL37
- 1128 0470 4C060000 		.4byte	0x64c
+ 1128 0470 4D060000 		.4byte	0x64d
  1129 0474 8A040000 		.4byte	0x48a
  1130 0478 10       		.uleb128 0x10
  1131 0479 01       		.uleb128 0x1
@@ -1614,11 +1614,11 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1147 0489 00       		.byte	0
  1148 048a 0F       		.uleb128 0xf
  1149 048b 00010000 		.4byte	.LVL39
- 1150 048f 15060000 		.4byte	0x615
+ 1150 048f 16060000 		.4byte	0x616
  1151 0493 A7040000 		.4byte	0x4a7
  1152 0497 10       		.uleb128 0x10
  1153 0498 01       		.uleb128 0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 28
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 28
 
 
  1154 0499 50       		.byte	0x50
@@ -1634,7 +1634,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1164 04a6 00       		.byte	0
  1165 04a7 0F       		.uleb128 0xf
  1166 04a8 06010000 		.4byte	.LVL40
- 1167 04ac 20060000 		.4byte	0x620
+ 1167 04ac 21060000 		.4byte	0x621
  1168 04b0 BB040000 		.4byte	0x4bb
  1169 04b4 10       		.uleb128 0x10
  1170 04b5 01       		.uleb128 0x1
@@ -1645,7 +1645,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1175 04ba 00       		.byte	0
  1176 04bb 0F       		.uleb128 0xf
  1177 04bc 0E010000 		.4byte	.LVL43
- 1178 04c0 20060000 		.4byte	0x620
+ 1178 04c0 21060000 		.4byte	0x621
  1179 04c4 D2040000 		.4byte	0x4d2
  1180 04c8 10       		.uleb128 0x10
  1181 04c9 01       		.uleb128 0x1
@@ -1656,7 +1656,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1186 04d1 00       		.byte	0
  1187 04d2 0F       		.uleb128 0xf
  1188 04d3 1E010000 		.4byte	.LVL45
- 1189 04d7 57060000 		.4byte	0x657
+ 1189 04d7 58060000 		.4byte	0x658
  1190 04db F1040000 		.4byte	0x4f1
  1191 04df 10       		.uleb128 0x10
  1192 04e0 01       		.uleb128 0x1
@@ -1678,10 +1678,10 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1208 04f0 00       		.byte	0
  1209 04f1 0F       		.uleb128 0xf
  1210 04f2 28010000 		.4byte	.LVL46
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 29
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 29
 
 
- 1211 04f6 4C060000 		.4byte	0x64c
+ 1211 04f6 4D060000 		.4byte	0x64d
  1212 04fa 10050000 		.4byte	0x510
  1213 04fe 10       		.uleb128 0x10
  1214 04ff 01       		.uleb128 0x1
@@ -1703,7 +1703,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1230 050f 00       		.byte	0
  1231 0510 0F       		.uleb128 0xf
  1232 0511 36010000 		.4byte	.LVL48
- 1233 0515 15060000 		.4byte	0x615
+ 1233 0515 16060000 		.4byte	0x616
  1234 0519 2D050000 		.4byte	0x52d
  1235 051d 10       		.uleb128 0x10
  1236 051e 01       		.uleb128 0x1
@@ -1720,7 +1720,7 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1247 052c 00       		.byte	0
  1248 052d 0F       		.uleb128 0xf
  1249 052e 3C010000 		.4byte	.LVL49
- 1250 0532 20060000 		.4byte	0x620
+ 1250 0532 21060000 		.4byte	0x621
  1251 0536 41050000 		.4byte	0x541
  1252 053a 10       		.uleb128 0x10
  1253 053b 01       		.uleb128 0x1
@@ -1731,1066 +1731,1067 @@ ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 1
  1258 0540 00       		.byte	0
  1259 0541 0F       		.uleb128 0xf
  1260 0542 44010000 		.4byte	.LVL52
- 1261 0546 20060000 		.4byte	0x620
+ 1261 0546 21060000 		.4byte	0x621
  1262 054a 58050000 		.4byte	0x558
  1263 054e 10       		.uleb128 0x10
  1264 054f 01       		.uleb128 0x1
  1265 0550 50       		.byte	0x50
  1266 0551 05       		.uleb128 0x5
  1267 0552 03       		.byte	0x3
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 30
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 30
 
 
  1268 0553 BC010000 		.4byte	.LC10
  1269 0557 00       		.byte	0
  1270 0558 12       		.uleb128 0x12
  1271 0559 5C010000 		.4byte	.LVL53
- 1272 055d 62060000 		.4byte	0x662
+ 1272 055d 63060000 		.4byte	0x663
  1273 0561 0F       		.uleb128 0xf
  1274 0562 62010000 		.4byte	.LVL54
- 1275 0566 6D060000 		.4byte	0x66d
- 1276 056a 74050000 		.4byte	0x574
+ 1275 0566 6E060000 		.4byte	0x66e
+ 1276 056a 75050000 		.4byte	0x575
  1277 056e 10       		.uleb128 0x10
  1278 056f 01       		.uleb128 0x1
  1279 0570 50       		.byte	0x50
- 1280 0571 01       		.uleb128 0x1
- 1281 0572 35       		.byte	0x35
- 1282 0573 00       		.byte	0
- 1283 0574 12       		.uleb128 0x12
- 1284 0575 66010000 		.4byte	.LVL55
- 1285 0579 78060000 		.4byte	0x678
- 1286 057d 0F       		.uleb128 0xf
- 1287 057e 82010000 		.4byte	.LVL56
- 1288 0582 83060000 		.4byte	0x683
- 1289 0586 A1050000 		.4byte	0x5a1
- 1290 058a 10       		.uleb128 0x10
- 1291 058b 01       		.uleb128 0x1
- 1292 058c 50       		.byte	0x50
- 1293 058d 01       		.uleb128 0x1
- 1294 058e 48       		.byte	0x48
- 1295 058f 10       		.uleb128 0x10
- 1296 0590 01       		.uleb128 0x1
- 1297 0591 51       		.byte	0x51
- 1298 0592 02       		.uleb128 0x2
- 1299 0593 08       		.byte	0x8
- 1300 0594 28       		.byte	0x28
- 1301 0595 10       		.uleb128 0x10
- 1302 0596 01       		.uleb128 0x1
- 1303 0597 52       		.byte	0x52
- 1304 0598 01       		.uleb128 0x1
- 1305 0599 36       		.byte	0x36
- 1306 059a 10       		.uleb128 0x10
- 1307 059b 01       		.uleb128 0x1
- 1308 059c 53       		.byte	0x53
- 1309 059d 02       		.uleb128 0x2
- 1310 059e 7D       		.byte	0x7d
- 1311 059f 00       		.sleb128 0
- 1312 05a0 00       		.byte	0
- 1313 05a1 11       		.uleb128 0x11
- 1314 05a2 90020000 		.4byte	.LVL91
- 1315 05a6 8E060000 		.4byte	0x68e
- 1316 05aa 10       		.uleb128 0x10
- 1317 05ab 01       		.uleb128 0x1
- 1318 05ac 50       		.byte	0x50
- 1319 05ad 03       		.uleb128 0x3
- 1320 05ae 91       		.byte	0x91
- 1321 05af B07F     		.sleb128 -80
- 1322 05b1 10       		.uleb128 0x10
- 1323 05b2 01       		.uleb128 0x1
- 1324 05b3 51       		.byte	0x51
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 31
+ 1280 0571 02       		.uleb128 0x2
+ 1281 0572 08       		.byte	0x8
+ 1282 0573 5F       		.byte	0x5f
+ 1283 0574 00       		.byte	0
+ 1284 0575 12       		.uleb128 0x12
+ 1285 0576 66010000 		.4byte	.LVL55
+ 1286 057a 79060000 		.4byte	0x679
+ 1287 057e 0F       		.uleb128 0xf
+ 1288 057f 82010000 		.4byte	.LVL56
+ 1289 0583 84060000 		.4byte	0x684
+ 1290 0587 A2050000 		.4byte	0x5a2
+ 1291 058b 10       		.uleb128 0x10
+ 1292 058c 01       		.uleb128 0x1
+ 1293 058d 50       		.byte	0x50
+ 1294 058e 01       		.uleb128 0x1
+ 1295 058f 48       		.byte	0x48
+ 1296 0590 10       		.uleb128 0x10
+ 1297 0591 01       		.uleb128 0x1
+ 1298 0592 51       		.byte	0x51
+ 1299 0593 02       		.uleb128 0x2
+ 1300 0594 08       		.byte	0x8
+ 1301 0595 28       		.byte	0x28
+ 1302 0596 10       		.uleb128 0x10
+ 1303 0597 01       		.uleb128 0x1
+ 1304 0598 52       		.byte	0x52
+ 1305 0599 01       		.uleb128 0x1
+ 1306 059a 36       		.byte	0x36
+ 1307 059b 10       		.uleb128 0x10
+ 1308 059c 01       		.uleb128 0x1
+ 1309 059d 53       		.byte	0x53
+ 1310 059e 02       		.uleb128 0x2
+ 1311 059f 7D       		.byte	0x7d
+ 1312 05a0 00       		.sleb128 0
+ 1313 05a1 00       		.byte	0
+ 1314 05a2 11       		.uleb128 0x11
+ 1315 05a3 90020000 		.4byte	.LVL91
+ 1316 05a7 8F060000 		.4byte	0x68f
+ 1317 05ab 10       		.uleb128 0x10
+ 1318 05ac 01       		.uleb128 0x1
+ 1319 05ad 50       		.byte	0x50
+ 1320 05ae 03       		.uleb128 0x3
+ 1321 05af 91       		.byte	0x91
+ 1322 05b0 B07F     		.sleb128 -80
+ 1323 05b2 10       		.uleb128 0x10
+ 1324 05b3 01       		.uleb128 0x1
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 31
 
 
- 1325 05b4 01       		.uleb128 0x1
- 1326 05b5 3E       		.byte	0x3e
- 1327 05b6 00       		.byte	0
+ 1325 05b4 51       		.byte	0x51
+ 1326 05b5 01       		.uleb128 0x1
+ 1327 05b6 3E       		.byte	0x3e
  1328 05b7 00       		.byte	0
- 1329 05b8 13       		.uleb128 0x13
- 1330 05b9 D5000000 		.4byte	0xd5
- 1331 05bd C8050000 		.4byte	0x5c8
- 1332 05c1 14       		.uleb128 0x14
- 1333 05c2 0C010000 		.4byte	0x10c
- 1334 05c6 31       		.byte	0x31
- 1335 05c7 00       		.byte	0
- 1336 05c8 13       		.uleb128 0x13
- 1337 05c9 81000000 		.4byte	0x81
- 1338 05cd D8050000 		.4byte	0x5d8
- 1339 05d1 14       		.uleb128 0x14
- 1340 05d2 0C010000 		.4byte	0x10c
- 1341 05d6 0D       		.byte	0xd
- 1342 05d7 00       		.byte	0
- 1343 05d8 13       		.uleb128 0x13
- 1344 05d9 81000000 		.4byte	0x81
- 1345 05dd E8050000 		.4byte	0x5e8
- 1346 05e1 14       		.uleb128 0x14
- 1347 05e2 0C010000 		.4byte	0x10c
- 1348 05e6 05       		.byte	0x5
- 1349 05e7 00       		.byte	0
- 1350 05e8 15       		.uleb128 0x15
- 1351 05e9 72000000 		.4byte	.LASF43
- 1352 05ed 06       		.byte	0x6
- 1353 05ee 15       		.byte	0x15
- 1354 05ef DC000000 		.4byte	0xdc
- 1355 05f3 05       		.uleb128 0x5
- 1356 05f4 03       		.byte	0x3
- 1357 05f5 00000000 		.4byte	timer_flag
- 1358 05f9 16       		.uleb128 0x16
- 1359 05fa 4C030000 		.4byte	.LASF44
- 1360 05fe 07       		.byte	0x7
- 1361 05ff 1207     		.2byte	0x712
- 1362 0601 05060000 		.4byte	0x605
- 1363 0605 06       		.uleb128 0x6
- 1364 0606 8C000000 		.4byte	0x8c
- 1365 060a 17       		.uleb128 0x17
- 1366 060b 7D000000 		.4byte	.LASF45
- 1367 060f 7D000000 		.4byte	.LASF45
- 1368 0613 08       		.byte	0x8
- 1369 0614 5D       		.byte	0x5d
- 1370 0615 17       		.uleb128 0x17
- 1371 0616 58010000 		.4byte	.LASF46
- 1372 061a 58010000 		.4byte	.LASF46
- 1373 061e 09       		.byte	0x9
- 1374 061f E7       		.byte	0xe7
- 1375 0620 17       		.uleb128 0x17
- 1376 0621 0A000000 		.4byte	.LASF47
- 1377 0625 0A000000 		.4byte	.LASF47
- 1378 0629 0A       		.byte	0xa
- 1379 062a 8B       		.byte	0x8b
- 1380 062b 17       		.uleb128 0x17
- 1381 062c 07020000 		.4byte	.LASF48
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 32
+ 1329 05b8 00       		.byte	0
+ 1330 05b9 13       		.uleb128 0x13
+ 1331 05ba D5000000 		.4byte	0xd5
+ 1332 05be C9050000 		.4byte	0x5c9
+ 1333 05c2 14       		.uleb128 0x14
+ 1334 05c3 0C010000 		.4byte	0x10c
+ 1335 05c7 31       		.byte	0x31
+ 1336 05c8 00       		.byte	0
+ 1337 05c9 13       		.uleb128 0x13
+ 1338 05ca 81000000 		.4byte	0x81
+ 1339 05ce D9050000 		.4byte	0x5d9
+ 1340 05d2 14       		.uleb128 0x14
+ 1341 05d3 0C010000 		.4byte	0x10c
+ 1342 05d7 0D       		.byte	0xd
+ 1343 05d8 00       		.byte	0
+ 1344 05d9 13       		.uleb128 0x13
+ 1345 05da 81000000 		.4byte	0x81
+ 1346 05de E9050000 		.4byte	0x5e9
+ 1347 05e2 14       		.uleb128 0x14
+ 1348 05e3 0C010000 		.4byte	0x10c
+ 1349 05e7 05       		.byte	0x5
+ 1350 05e8 00       		.byte	0
+ 1351 05e9 15       		.uleb128 0x15
+ 1352 05ea 72000000 		.4byte	.LASF43
+ 1353 05ee 06       		.byte	0x6
+ 1354 05ef 15       		.byte	0x15
+ 1355 05f0 DC000000 		.4byte	0xdc
+ 1356 05f4 05       		.uleb128 0x5
+ 1357 05f5 03       		.byte	0x3
+ 1358 05f6 00000000 		.4byte	timer_flag
+ 1359 05fa 16       		.uleb128 0x16
+ 1360 05fb 4C030000 		.4byte	.LASF44
+ 1361 05ff 07       		.byte	0x7
+ 1362 0600 1207     		.2byte	0x712
+ 1363 0602 06060000 		.4byte	0x606
+ 1364 0606 06       		.uleb128 0x6
+ 1365 0607 8C000000 		.4byte	0x8c
+ 1366 060b 17       		.uleb128 0x17
+ 1367 060c 7D000000 		.4byte	.LASF45
+ 1368 0610 7D000000 		.4byte	.LASF45
+ 1369 0614 08       		.byte	0x8
+ 1370 0615 5D       		.byte	0x5d
+ 1371 0616 17       		.uleb128 0x17
+ 1372 0617 58010000 		.4byte	.LASF46
+ 1373 061b 58010000 		.4byte	.LASF46
+ 1374 061f 09       		.byte	0x9
+ 1375 0620 E7       		.byte	0xe7
+ 1376 0621 17       		.uleb128 0x17
+ 1377 0622 0A000000 		.4byte	.LASF47
+ 1378 0626 0A000000 		.4byte	.LASF47
+ 1379 062a 0A       		.byte	0xa
+ 1380 062b 8B       		.byte	0x8b
+ 1381 062c 17       		.uleb128 0x17
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 32
 
 
- 1382 0630 07020000 		.4byte	.LASF48
- 1383 0634 08       		.byte	0x8
- 1384 0635 17       		.byte	0x17
- 1385 0636 17       		.uleb128 0x17
- 1386 0637 7B030000 		.4byte	.LASF49
- 1387 063b 7B030000 		.4byte	.LASF49
- 1388 063f 0A       		.byte	0xa
- 1389 0640 54       		.byte	0x54
- 1390 0641 17       		.uleb128 0x17
- 1391 0642 B5030000 		.4byte	.LASF50
- 1392 0646 B5030000 		.4byte	.LASF50
- 1393 064a 0B       		.byte	0xb
- 1394 064b 76       		.byte	0x76
- 1395 064c 17       		.uleb128 0x17
- 1396 064d 4D000000 		.4byte	.LASF51
- 1397 0651 4D000000 		.4byte	.LASF51
- 1398 0655 08       		.byte	0x8
- 1399 0656 28       		.byte	0x28
- 1400 0657 17       		.uleb128 0x17
- 1401 0658 B1010000 		.4byte	.LASF52
- 1402 065c B1010000 		.4byte	.LASF52
- 1403 0660 08       		.byte	0x8
- 1404 0661 43       		.byte	0x43
- 1405 0662 17       		.uleb128 0x17
- 1406 0663 BD000000 		.4byte	.LASF53
- 1407 0667 BD000000 		.4byte	.LASF53
- 1408 066b 0C       		.byte	0xc
- 1409 066c 18       		.byte	0x18
- 1410 066d 17       		.uleb128 0x17
- 1411 066e A3000000 		.4byte	.LASF54
- 1412 0672 A3000000 		.4byte	.LASF54
- 1413 0676 0D       		.byte	0xd
- 1414 0677 6A       		.byte	0x6a
- 1415 0678 17       		.uleb128 0x17
- 1416 0679 0A010000 		.4byte	.LASF55
- 1417 067d 0A010000 		.4byte	.LASF55
- 1418 0681 0D       		.byte	0xd
- 1419 0682 5A       		.byte	0x5a
- 1420 0683 17       		.uleb128 0x17
- 1421 0684 79010000 		.4byte	.LASF56
- 1422 0688 79010000 		.4byte	.LASF56
- 1423 068c 08       		.byte	0x8
- 1424 068d 36       		.byte	0x36
- 1425 068e 17       		.uleb128 0x17
- 1426 068f 92030000 		.4byte	.LASF57
- 1427 0693 92030000 		.4byte	.LASF57
- 1428 0697 0A       		.byte	0xa
- 1429 0698 8C       		.byte	0x8c
- 1430 0699 00       		.byte	0
- 1431              		.section	.debug_abbrev,"",%progbits
- 1432              	.Ldebug_abbrev0:
- 1433 0000 01       		.uleb128 0x1
- 1434 0001 11       		.uleb128 0x11
- 1435 0002 01       		.byte	0x1
- 1436 0003 25       		.uleb128 0x25
- 1437 0004 0E       		.uleb128 0xe
- 1438 0005 13       		.uleb128 0x13
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 33
+ 1382 062d 07020000 		.4byte	.LASF48
+ 1383 0631 07020000 		.4byte	.LASF48
+ 1384 0635 08       		.byte	0x8
+ 1385 0636 17       		.byte	0x17
+ 1386 0637 17       		.uleb128 0x17
+ 1387 0638 7B030000 		.4byte	.LASF49
+ 1388 063c 7B030000 		.4byte	.LASF49
+ 1389 0640 0A       		.byte	0xa
+ 1390 0641 54       		.byte	0x54
+ 1391 0642 17       		.uleb128 0x17
+ 1392 0643 B5030000 		.4byte	.LASF50
+ 1393 0647 B5030000 		.4byte	.LASF50
+ 1394 064b 0B       		.byte	0xb
+ 1395 064c 76       		.byte	0x76
+ 1396 064d 17       		.uleb128 0x17
+ 1397 064e 4D000000 		.4byte	.LASF51
+ 1398 0652 4D000000 		.4byte	.LASF51
+ 1399 0656 08       		.byte	0x8
+ 1400 0657 28       		.byte	0x28
+ 1401 0658 17       		.uleb128 0x17
+ 1402 0659 B1010000 		.4byte	.LASF52
+ 1403 065d B1010000 		.4byte	.LASF52
+ 1404 0661 08       		.byte	0x8
+ 1405 0662 43       		.byte	0x43
+ 1406 0663 17       		.uleb128 0x17
+ 1407 0664 BD000000 		.4byte	.LASF53
+ 1408 0668 BD000000 		.4byte	.LASF53
+ 1409 066c 0C       		.byte	0xc
+ 1410 066d 18       		.byte	0x18
+ 1411 066e 17       		.uleb128 0x17
+ 1412 066f A3000000 		.4byte	.LASF54
+ 1413 0673 A3000000 		.4byte	.LASF54
+ 1414 0677 0D       		.byte	0xd
+ 1415 0678 6A       		.byte	0x6a
+ 1416 0679 17       		.uleb128 0x17
+ 1417 067a 0A010000 		.4byte	.LASF55
+ 1418 067e 0A010000 		.4byte	.LASF55
+ 1419 0682 0D       		.byte	0xd
+ 1420 0683 5A       		.byte	0x5a
+ 1421 0684 17       		.uleb128 0x17
+ 1422 0685 79010000 		.4byte	.LASF56
+ 1423 0689 79010000 		.4byte	.LASF56
+ 1424 068d 08       		.byte	0x8
+ 1425 068e 36       		.byte	0x36
+ 1426 068f 17       		.uleb128 0x17
+ 1427 0690 92030000 		.4byte	.LASF57
+ 1428 0694 92030000 		.4byte	.LASF57
+ 1429 0698 0A       		.byte	0xa
+ 1430 0699 8C       		.byte	0x8c
+ 1431 069a 00       		.byte	0
+ 1432              		.section	.debug_abbrev,"",%progbits
+ 1433              	.Ldebug_abbrev0:
+ 1434 0000 01       		.uleb128 0x1
+ 1435 0001 11       		.uleb128 0x11
+ 1436 0002 01       		.byte	0x1
+ 1437 0003 25       		.uleb128 0x25
+ 1438 0004 0E       		.uleb128 0xe
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 33
 
 
- 1439 0006 0B       		.uleb128 0xb
- 1440 0007 03       		.uleb128 0x3
- 1441 0008 0E       		.uleb128 0xe
- 1442 0009 1B       		.uleb128 0x1b
- 1443 000a 0E       		.uleb128 0xe
- 1444 000b 55       		.uleb128 0x55
- 1445 000c 17       		.uleb128 0x17
- 1446 000d 11       		.uleb128 0x11
- 1447 000e 01       		.uleb128 0x1
- 1448 000f 10       		.uleb128 0x10
- 1449 0010 17       		.uleb128 0x17
- 1450 0011 00       		.byte	0
- 1451 0012 00       		.byte	0
- 1452 0013 02       		.uleb128 0x2
- 1453 0014 24       		.uleb128 0x24
- 1454 0015 00       		.byte	0
- 1455 0016 0B       		.uleb128 0xb
- 1456 0017 0B       		.uleb128 0xb
- 1457 0018 3E       		.uleb128 0x3e
- 1458 0019 0B       		.uleb128 0xb
- 1459 001a 03       		.uleb128 0x3
- 1460 001b 0E       		.uleb128 0xe
- 1461 001c 00       		.byte	0
- 1462 001d 00       		.byte	0
- 1463 001e 03       		.uleb128 0x3
- 1464 001f 16       		.uleb128 0x16
- 1465 0020 00       		.byte	0
- 1466 0021 03       		.uleb128 0x3
- 1467 0022 0E       		.uleb128 0xe
- 1468 0023 3A       		.uleb128 0x3a
- 1469 0024 0B       		.uleb128 0xb
- 1470 0025 3B       		.uleb128 0x3b
- 1471 0026 0B       		.uleb128 0xb
- 1472 0027 49       		.uleb128 0x49
- 1473 0028 13       		.uleb128 0x13
- 1474 0029 00       		.byte	0
- 1475 002a 00       		.byte	0
- 1476 002b 04       		.uleb128 0x4
- 1477 002c 24       		.uleb128 0x24
- 1478 002d 00       		.byte	0
- 1479 002e 0B       		.uleb128 0xb
- 1480 002f 0B       		.uleb128 0xb
- 1481 0030 3E       		.uleb128 0x3e
- 1482 0031 0B       		.uleb128 0xb
- 1483 0032 03       		.uleb128 0x3
- 1484 0033 08       		.uleb128 0x8
- 1485 0034 00       		.byte	0
- 1486 0035 00       		.byte	0
- 1487 0036 05       		.uleb128 0x5
- 1488 0037 16       		.uleb128 0x16
- 1489 0038 00       		.byte	0
- 1490 0039 03       		.uleb128 0x3
- 1491 003a 0E       		.uleb128 0xe
- 1492 003b 3A       		.uleb128 0x3a
- 1493 003c 0B       		.uleb128 0xb
- 1494 003d 3B       		.uleb128 0x3b
- 1495 003e 05       		.uleb128 0x5
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 34
+ 1439 0005 13       		.uleb128 0x13
+ 1440 0006 0B       		.uleb128 0xb
+ 1441 0007 03       		.uleb128 0x3
+ 1442 0008 0E       		.uleb128 0xe
+ 1443 0009 1B       		.uleb128 0x1b
+ 1444 000a 0E       		.uleb128 0xe
+ 1445 000b 55       		.uleb128 0x55
+ 1446 000c 17       		.uleb128 0x17
+ 1447 000d 11       		.uleb128 0x11
+ 1448 000e 01       		.uleb128 0x1
+ 1449 000f 10       		.uleb128 0x10
+ 1450 0010 17       		.uleb128 0x17
+ 1451 0011 00       		.byte	0
+ 1452 0012 00       		.byte	0
+ 1453 0013 02       		.uleb128 0x2
+ 1454 0014 24       		.uleb128 0x24
+ 1455 0015 00       		.byte	0
+ 1456 0016 0B       		.uleb128 0xb
+ 1457 0017 0B       		.uleb128 0xb
+ 1458 0018 3E       		.uleb128 0x3e
+ 1459 0019 0B       		.uleb128 0xb
+ 1460 001a 03       		.uleb128 0x3
+ 1461 001b 0E       		.uleb128 0xe
+ 1462 001c 00       		.byte	0
+ 1463 001d 00       		.byte	0
+ 1464 001e 03       		.uleb128 0x3
+ 1465 001f 16       		.uleb128 0x16
+ 1466 0020 00       		.byte	0
+ 1467 0021 03       		.uleb128 0x3
+ 1468 0022 0E       		.uleb128 0xe
+ 1469 0023 3A       		.uleb128 0x3a
+ 1470 0024 0B       		.uleb128 0xb
+ 1471 0025 3B       		.uleb128 0x3b
+ 1472 0026 0B       		.uleb128 0xb
+ 1473 0027 49       		.uleb128 0x49
+ 1474 0028 13       		.uleb128 0x13
+ 1475 0029 00       		.byte	0
+ 1476 002a 00       		.byte	0
+ 1477 002b 04       		.uleb128 0x4
+ 1478 002c 24       		.uleb128 0x24
+ 1479 002d 00       		.byte	0
+ 1480 002e 0B       		.uleb128 0xb
+ 1481 002f 0B       		.uleb128 0xb
+ 1482 0030 3E       		.uleb128 0x3e
+ 1483 0031 0B       		.uleb128 0xb
+ 1484 0032 03       		.uleb128 0x3
+ 1485 0033 08       		.uleb128 0x8
+ 1486 0034 00       		.byte	0
+ 1487 0035 00       		.byte	0
+ 1488 0036 05       		.uleb128 0x5
+ 1489 0037 16       		.uleb128 0x16
+ 1490 0038 00       		.byte	0
+ 1491 0039 03       		.uleb128 0x3
+ 1492 003a 0E       		.uleb128 0xe
+ 1493 003b 3A       		.uleb128 0x3a
+ 1494 003c 0B       		.uleb128 0xb
+ 1495 003d 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 34
 
 
- 1496 003f 49       		.uleb128 0x49
- 1497 0040 13       		.uleb128 0x13
- 1498 0041 00       		.byte	0
- 1499 0042 00       		.byte	0
- 1500 0043 06       		.uleb128 0x6
- 1501 0044 35       		.uleb128 0x35
- 1502 0045 00       		.byte	0
- 1503 0046 49       		.uleb128 0x49
- 1504 0047 13       		.uleb128 0x13
- 1505 0048 00       		.byte	0
- 1506 0049 00       		.byte	0
- 1507 004a 07       		.uleb128 0x7
- 1508 004b 04       		.uleb128 0x4
- 1509 004c 01       		.byte	0x1
- 1510 004d 0B       		.uleb128 0xb
- 1511 004e 0B       		.uleb128 0xb
- 1512 004f 49       		.uleb128 0x49
- 1513 0050 13       		.uleb128 0x13
- 1514 0051 3A       		.uleb128 0x3a
- 1515 0052 0B       		.uleb128 0xb
- 1516 0053 3B       		.uleb128 0x3b
- 1517 0054 0B       		.uleb128 0xb
- 1518 0055 01       		.uleb128 0x1
- 1519 0056 13       		.uleb128 0x13
- 1520 0057 00       		.byte	0
- 1521 0058 00       		.byte	0
- 1522 0059 08       		.uleb128 0x8
- 1523 005a 28       		.uleb128 0x28
- 1524 005b 00       		.byte	0
- 1525 005c 03       		.uleb128 0x3
- 1526 005d 0E       		.uleb128 0xe
- 1527 005e 1C       		.uleb128 0x1c
- 1528 005f 0B       		.uleb128 0xb
- 1529 0060 00       		.byte	0
- 1530 0061 00       		.byte	0
- 1531 0062 09       		.uleb128 0x9
- 1532 0063 2E       		.uleb128 0x2e
- 1533 0064 01       		.byte	0x1
- 1534 0065 3F       		.uleb128 0x3f
- 1535 0066 19       		.uleb128 0x19
- 1536 0067 03       		.uleb128 0x3
- 1537 0068 0E       		.uleb128 0xe
- 1538 0069 3A       		.uleb128 0x3a
- 1539 006a 0B       		.uleb128 0xb
- 1540 006b 3B       		.uleb128 0x3b
- 1541 006c 0B       		.uleb128 0xb
- 1542 006d 27       		.uleb128 0x27
- 1543 006e 19       		.uleb128 0x19
- 1544 006f 49       		.uleb128 0x49
- 1545 0070 13       		.uleb128 0x13
- 1546 0071 8701     		.uleb128 0x87
- 1547 0073 19       		.uleb128 0x19
- 1548 0074 11       		.uleb128 0x11
- 1549 0075 01       		.uleb128 0x1
- 1550 0076 12       		.uleb128 0x12
- 1551 0077 06       		.uleb128 0x6
- 1552 0078 40       		.uleb128 0x40
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 35
+ 1496 003e 05       		.uleb128 0x5
+ 1497 003f 49       		.uleb128 0x49
+ 1498 0040 13       		.uleb128 0x13
+ 1499 0041 00       		.byte	0
+ 1500 0042 00       		.byte	0
+ 1501 0043 06       		.uleb128 0x6
+ 1502 0044 35       		.uleb128 0x35
+ 1503 0045 00       		.byte	0
+ 1504 0046 49       		.uleb128 0x49
+ 1505 0047 13       		.uleb128 0x13
+ 1506 0048 00       		.byte	0
+ 1507 0049 00       		.byte	0
+ 1508 004a 07       		.uleb128 0x7
+ 1509 004b 04       		.uleb128 0x4
+ 1510 004c 01       		.byte	0x1
+ 1511 004d 0B       		.uleb128 0xb
+ 1512 004e 0B       		.uleb128 0xb
+ 1513 004f 49       		.uleb128 0x49
+ 1514 0050 13       		.uleb128 0x13
+ 1515 0051 3A       		.uleb128 0x3a
+ 1516 0052 0B       		.uleb128 0xb
+ 1517 0053 3B       		.uleb128 0x3b
+ 1518 0054 0B       		.uleb128 0xb
+ 1519 0055 01       		.uleb128 0x1
+ 1520 0056 13       		.uleb128 0x13
+ 1521 0057 00       		.byte	0
+ 1522 0058 00       		.byte	0
+ 1523 0059 08       		.uleb128 0x8
+ 1524 005a 28       		.uleb128 0x28
+ 1525 005b 00       		.byte	0
+ 1526 005c 03       		.uleb128 0x3
+ 1527 005d 0E       		.uleb128 0xe
+ 1528 005e 1C       		.uleb128 0x1c
+ 1529 005f 0B       		.uleb128 0xb
+ 1530 0060 00       		.byte	0
+ 1531 0061 00       		.byte	0
+ 1532 0062 09       		.uleb128 0x9
+ 1533 0063 2E       		.uleb128 0x2e
+ 1534 0064 01       		.byte	0x1
+ 1535 0065 3F       		.uleb128 0x3f
+ 1536 0066 19       		.uleb128 0x19
+ 1537 0067 03       		.uleb128 0x3
+ 1538 0068 0E       		.uleb128 0xe
+ 1539 0069 3A       		.uleb128 0x3a
+ 1540 006a 0B       		.uleb128 0xb
+ 1541 006b 3B       		.uleb128 0x3b
+ 1542 006c 0B       		.uleb128 0xb
+ 1543 006d 27       		.uleb128 0x27
+ 1544 006e 19       		.uleb128 0x19
+ 1545 006f 49       		.uleb128 0x49
+ 1546 0070 13       		.uleb128 0x13
+ 1547 0071 8701     		.uleb128 0x87
+ 1548 0073 19       		.uleb128 0x19
+ 1549 0074 11       		.uleb128 0x11
+ 1550 0075 01       		.uleb128 0x1
+ 1551 0076 12       		.uleb128 0x12
+ 1552 0077 06       		.uleb128 0x6
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 35
 
 
- 1553 0079 18       		.uleb128 0x18
- 1554 007a 9642     		.uleb128 0x2116
- 1555 007c 19       		.uleb128 0x19
- 1556 007d 01       		.uleb128 0x1
- 1557 007e 13       		.uleb128 0x13
- 1558 007f 00       		.byte	0
- 1559 0080 00       		.byte	0
- 1560 0081 0A       		.uleb128 0xa
- 1561 0082 34       		.uleb128 0x34
- 1562 0083 00       		.byte	0
- 1563 0084 03       		.uleb128 0x3
- 1564 0085 0E       		.uleb128 0xe
- 1565 0086 3A       		.uleb128 0x3a
- 1566 0087 0B       		.uleb128 0xb
- 1567 0088 3B       		.uleb128 0x3b
- 1568 0089 0B       		.uleb128 0xb
- 1569 008a 49       		.uleb128 0x49
- 1570 008b 13       		.uleb128 0x13
- 1571 008c 02       		.uleb128 0x2
- 1572 008d 18       		.uleb128 0x18
- 1573 008e 00       		.byte	0
- 1574 008f 00       		.byte	0
- 1575 0090 0B       		.uleb128 0xb
- 1576 0091 34       		.uleb128 0x34
- 1577 0092 00       		.byte	0
- 1578 0093 03       		.uleb128 0x3
- 1579 0094 0E       		.uleb128 0xe
- 1580 0095 3A       		.uleb128 0x3a
- 1581 0096 0B       		.uleb128 0xb
- 1582 0097 3B       		.uleb128 0x3b
- 1583 0098 0B       		.uleb128 0xb
- 1584 0099 49       		.uleb128 0x49
- 1585 009a 13       		.uleb128 0x13
- 1586 009b 02       		.uleb128 0x2
- 1587 009c 17       		.uleb128 0x17
- 1588 009d 00       		.byte	0
- 1589 009e 00       		.byte	0
- 1590 009f 0C       		.uleb128 0xc
- 1591 00a0 34       		.uleb128 0x34
- 1592 00a1 00       		.byte	0
- 1593 00a2 03       		.uleb128 0x3
- 1594 00a3 0E       		.uleb128 0xe
- 1595 00a4 3A       		.uleb128 0x3a
- 1596 00a5 0B       		.uleb128 0xb
- 1597 00a6 3B       		.uleb128 0x3b
- 1598 00a7 0B       		.uleb128 0xb
- 1599 00a8 49       		.uleb128 0x49
- 1600 00a9 13       		.uleb128 0x13
- 1601 00aa 1C       		.uleb128 0x1c
- 1602 00ab 0D       		.uleb128 0xd
- 1603 00ac 00       		.byte	0
- 1604 00ad 00       		.byte	0
- 1605 00ae 0D       		.uleb128 0xd
- 1606 00af 0B       		.uleb128 0xb
- 1607 00b0 01       		.byte	0x1
- 1608 00b1 11       		.uleb128 0x11
- 1609 00b2 01       		.uleb128 0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 36
+ 1553 0078 40       		.uleb128 0x40
+ 1554 0079 18       		.uleb128 0x18
+ 1555 007a 9642     		.uleb128 0x2116
+ 1556 007c 19       		.uleb128 0x19
+ 1557 007d 01       		.uleb128 0x1
+ 1558 007e 13       		.uleb128 0x13
+ 1559 007f 00       		.byte	0
+ 1560 0080 00       		.byte	0
+ 1561 0081 0A       		.uleb128 0xa
+ 1562 0082 34       		.uleb128 0x34
+ 1563 0083 00       		.byte	0
+ 1564 0084 03       		.uleb128 0x3
+ 1565 0085 0E       		.uleb128 0xe
+ 1566 0086 3A       		.uleb128 0x3a
+ 1567 0087 0B       		.uleb128 0xb
+ 1568 0088 3B       		.uleb128 0x3b
+ 1569 0089 0B       		.uleb128 0xb
+ 1570 008a 49       		.uleb128 0x49
+ 1571 008b 13       		.uleb128 0x13
+ 1572 008c 02       		.uleb128 0x2
+ 1573 008d 18       		.uleb128 0x18
+ 1574 008e 00       		.byte	0
+ 1575 008f 00       		.byte	0
+ 1576 0090 0B       		.uleb128 0xb
+ 1577 0091 34       		.uleb128 0x34
+ 1578 0092 00       		.byte	0
+ 1579 0093 03       		.uleb128 0x3
+ 1580 0094 0E       		.uleb128 0xe
+ 1581 0095 3A       		.uleb128 0x3a
+ 1582 0096 0B       		.uleb128 0xb
+ 1583 0097 3B       		.uleb128 0x3b
+ 1584 0098 0B       		.uleb128 0xb
+ 1585 0099 49       		.uleb128 0x49
+ 1586 009a 13       		.uleb128 0x13
+ 1587 009b 02       		.uleb128 0x2
+ 1588 009c 17       		.uleb128 0x17
+ 1589 009d 00       		.byte	0
+ 1590 009e 00       		.byte	0
+ 1591 009f 0C       		.uleb128 0xc
+ 1592 00a0 34       		.uleb128 0x34
+ 1593 00a1 00       		.byte	0
+ 1594 00a2 03       		.uleb128 0x3
+ 1595 00a3 0E       		.uleb128 0xe
+ 1596 00a4 3A       		.uleb128 0x3a
+ 1597 00a5 0B       		.uleb128 0xb
+ 1598 00a6 3B       		.uleb128 0x3b
+ 1599 00a7 0B       		.uleb128 0xb
+ 1600 00a8 49       		.uleb128 0x49
+ 1601 00a9 13       		.uleb128 0x13
+ 1602 00aa 1C       		.uleb128 0x1c
+ 1603 00ab 0D       		.uleb128 0xd
+ 1604 00ac 00       		.byte	0
+ 1605 00ad 00       		.byte	0
+ 1606 00ae 0D       		.uleb128 0xd
+ 1607 00af 0B       		.uleb128 0xb
+ 1608 00b0 01       		.byte	0x1
+ 1609 00b1 11       		.uleb128 0x11
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 36
 
 
- 1610 00b3 12       		.uleb128 0x12
- 1611 00b4 06       		.uleb128 0x6
- 1612 00b5 01       		.uleb128 0x1
- 1613 00b6 13       		.uleb128 0x13
- 1614 00b7 00       		.byte	0
- 1615 00b8 00       		.byte	0
- 1616 00b9 0E       		.uleb128 0xe
- 1617 00ba 34       		.uleb128 0x34
- 1618 00bb 00       		.byte	0
- 1619 00bc 03       		.uleb128 0x3
- 1620 00bd 08       		.uleb128 0x8
- 1621 00be 3A       		.uleb128 0x3a
- 1622 00bf 0B       		.uleb128 0xb
- 1623 00c0 3B       		.uleb128 0x3b
- 1624 00c1 0B       		.uleb128 0xb
- 1625 00c2 49       		.uleb128 0x49
- 1626 00c3 13       		.uleb128 0x13
- 1627 00c4 02       		.uleb128 0x2
- 1628 00c5 17       		.uleb128 0x17
- 1629 00c6 00       		.byte	0
- 1630 00c7 00       		.byte	0
- 1631 00c8 0F       		.uleb128 0xf
- 1632 00c9 898201   		.uleb128 0x4109
- 1633 00cc 01       		.byte	0x1
- 1634 00cd 11       		.uleb128 0x11
- 1635 00ce 01       		.uleb128 0x1
- 1636 00cf 31       		.uleb128 0x31
- 1637 00d0 13       		.uleb128 0x13
- 1638 00d1 01       		.uleb128 0x1
- 1639 00d2 13       		.uleb128 0x13
- 1640 00d3 00       		.byte	0
- 1641 00d4 00       		.byte	0
- 1642 00d5 10       		.uleb128 0x10
- 1643 00d6 8A8201   		.uleb128 0x410a
- 1644 00d9 00       		.byte	0
- 1645 00da 02       		.uleb128 0x2
- 1646 00db 18       		.uleb128 0x18
- 1647 00dc 9142     		.uleb128 0x2111
- 1648 00de 18       		.uleb128 0x18
- 1649 00df 00       		.byte	0
- 1650 00e0 00       		.byte	0
- 1651 00e1 11       		.uleb128 0x11
- 1652 00e2 898201   		.uleb128 0x4109
- 1653 00e5 01       		.byte	0x1
- 1654 00e6 11       		.uleb128 0x11
- 1655 00e7 01       		.uleb128 0x1
- 1656 00e8 31       		.uleb128 0x31
- 1657 00e9 13       		.uleb128 0x13
- 1658 00ea 00       		.byte	0
- 1659 00eb 00       		.byte	0
- 1660 00ec 12       		.uleb128 0x12
- 1661 00ed 898201   		.uleb128 0x4109
- 1662 00f0 00       		.byte	0
- 1663 00f1 11       		.uleb128 0x11
- 1664 00f2 01       		.uleb128 0x1
- 1665 00f3 31       		.uleb128 0x31
- 1666 00f4 13       		.uleb128 0x13
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 37
+ 1610 00b2 01       		.uleb128 0x1
+ 1611 00b3 12       		.uleb128 0x12
+ 1612 00b4 06       		.uleb128 0x6
+ 1613 00b5 01       		.uleb128 0x1
+ 1614 00b6 13       		.uleb128 0x13
+ 1615 00b7 00       		.byte	0
+ 1616 00b8 00       		.byte	0
+ 1617 00b9 0E       		.uleb128 0xe
+ 1618 00ba 34       		.uleb128 0x34
+ 1619 00bb 00       		.byte	0
+ 1620 00bc 03       		.uleb128 0x3
+ 1621 00bd 08       		.uleb128 0x8
+ 1622 00be 3A       		.uleb128 0x3a
+ 1623 00bf 0B       		.uleb128 0xb
+ 1624 00c0 3B       		.uleb128 0x3b
+ 1625 00c1 0B       		.uleb128 0xb
+ 1626 00c2 49       		.uleb128 0x49
+ 1627 00c3 13       		.uleb128 0x13
+ 1628 00c4 02       		.uleb128 0x2
+ 1629 00c5 17       		.uleb128 0x17
+ 1630 00c6 00       		.byte	0
+ 1631 00c7 00       		.byte	0
+ 1632 00c8 0F       		.uleb128 0xf
+ 1633 00c9 898201   		.uleb128 0x4109
+ 1634 00cc 01       		.byte	0x1
+ 1635 00cd 11       		.uleb128 0x11
+ 1636 00ce 01       		.uleb128 0x1
+ 1637 00cf 31       		.uleb128 0x31
+ 1638 00d0 13       		.uleb128 0x13
+ 1639 00d1 01       		.uleb128 0x1
+ 1640 00d2 13       		.uleb128 0x13
+ 1641 00d3 00       		.byte	0
+ 1642 00d4 00       		.byte	0
+ 1643 00d5 10       		.uleb128 0x10
+ 1644 00d6 8A8201   		.uleb128 0x410a
+ 1645 00d9 00       		.byte	0
+ 1646 00da 02       		.uleb128 0x2
+ 1647 00db 18       		.uleb128 0x18
+ 1648 00dc 9142     		.uleb128 0x2111
+ 1649 00de 18       		.uleb128 0x18
+ 1650 00df 00       		.byte	0
+ 1651 00e0 00       		.byte	0
+ 1652 00e1 11       		.uleb128 0x11
+ 1653 00e2 898201   		.uleb128 0x4109
+ 1654 00e5 01       		.byte	0x1
+ 1655 00e6 11       		.uleb128 0x11
+ 1656 00e7 01       		.uleb128 0x1
+ 1657 00e8 31       		.uleb128 0x31
+ 1658 00e9 13       		.uleb128 0x13
+ 1659 00ea 00       		.byte	0
+ 1660 00eb 00       		.byte	0
+ 1661 00ec 12       		.uleb128 0x12
+ 1662 00ed 898201   		.uleb128 0x4109
+ 1663 00f0 00       		.byte	0
+ 1664 00f1 11       		.uleb128 0x11
+ 1665 00f2 01       		.uleb128 0x1
+ 1666 00f3 31       		.uleb128 0x31
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 37
 
 
- 1667 00f5 00       		.byte	0
- 1668 00f6 00       		.byte	0
- 1669 00f7 13       		.uleb128 0x13
- 1670 00f8 01       		.uleb128 0x1
- 1671 00f9 01       		.byte	0x1
- 1672 00fa 49       		.uleb128 0x49
- 1673 00fb 13       		.uleb128 0x13
- 1674 00fc 01       		.uleb128 0x1
- 1675 00fd 13       		.uleb128 0x13
- 1676 00fe 00       		.byte	0
- 1677 00ff 00       		.byte	0
- 1678 0100 14       		.uleb128 0x14
- 1679 0101 21       		.uleb128 0x21
- 1680 0102 00       		.byte	0
- 1681 0103 49       		.uleb128 0x49
- 1682 0104 13       		.uleb128 0x13
- 1683 0105 2F       		.uleb128 0x2f
- 1684 0106 0B       		.uleb128 0xb
- 1685 0107 00       		.byte	0
- 1686 0108 00       		.byte	0
- 1687 0109 15       		.uleb128 0x15
- 1688 010a 34       		.uleb128 0x34
- 1689 010b 00       		.byte	0
- 1690 010c 03       		.uleb128 0x3
- 1691 010d 0E       		.uleb128 0xe
- 1692 010e 3A       		.uleb128 0x3a
- 1693 010f 0B       		.uleb128 0xb
- 1694 0110 3B       		.uleb128 0x3b
- 1695 0111 0B       		.uleb128 0xb
- 1696 0112 49       		.uleb128 0x49
- 1697 0113 13       		.uleb128 0x13
- 1698 0114 3F       		.uleb128 0x3f
- 1699 0115 19       		.uleb128 0x19
- 1700 0116 02       		.uleb128 0x2
- 1701 0117 18       		.uleb128 0x18
- 1702 0118 00       		.byte	0
- 1703 0119 00       		.byte	0
- 1704 011a 16       		.uleb128 0x16
- 1705 011b 34       		.uleb128 0x34
- 1706 011c 00       		.byte	0
- 1707 011d 03       		.uleb128 0x3
- 1708 011e 0E       		.uleb128 0xe
- 1709 011f 3A       		.uleb128 0x3a
- 1710 0120 0B       		.uleb128 0xb
- 1711 0121 3B       		.uleb128 0x3b
- 1712 0122 05       		.uleb128 0x5
- 1713 0123 49       		.uleb128 0x49
- 1714 0124 13       		.uleb128 0x13
- 1715 0125 3F       		.uleb128 0x3f
- 1716 0126 19       		.uleb128 0x19
- 1717 0127 3C       		.uleb128 0x3c
- 1718 0128 19       		.uleb128 0x19
- 1719 0129 00       		.byte	0
- 1720 012a 00       		.byte	0
- 1721 012b 17       		.uleb128 0x17
- 1722 012c 2E       		.uleb128 0x2e
- 1723 012d 00       		.byte	0
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 38
+ 1667 00f4 13       		.uleb128 0x13
+ 1668 00f5 00       		.byte	0
+ 1669 00f6 00       		.byte	0
+ 1670 00f7 13       		.uleb128 0x13
+ 1671 00f8 01       		.uleb128 0x1
+ 1672 00f9 01       		.byte	0x1
+ 1673 00fa 49       		.uleb128 0x49
+ 1674 00fb 13       		.uleb128 0x13
+ 1675 00fc 01       		.uleb128 0x1
+ 1676 00fd 13       		.uleb128 0x13
+ 1677 00fe 00       		.byte	0
+ 1678 00ff 00       		.byte	0
+ 1679 0100 14       		.uleb128 0x14
+ 1680 0101 21       		.uleb128 0x21
+ 1681 0102 00       		.byte	0
+ 1682 0103 49       		.uleb128 0x49
+ 1683 0104 13       		.uleb128 0x13
+ 1684 0105 2F       		.uleb128 0x2f
+ 1685 0106 0B       		.uleb128 0xb
+ 1686 0107 00       		.byte	0
+ 1687 0108 00       		.byte	0
+ 1688 0109 15       		.uleb128 0x15
+ 1689 010a 34       		.uleb128 0x34
+ 1690 010b 00       		.byte	0
+ 1691 010c 03       		.uleb128 0x3
+ 1692 010d 0E       		.uleb128 0xe
+ 1693 010e 3A       		.uleb128 0x3a
+ 1694 010f 0B       		.uleb128 0xb
+ 1695 0110 3B       		.uleb128 0x3b
+ 1696 0111 0B       		.uleb128 0xb
+ 1697 0112 49       		.uleb128 0x49
+ 1698 0113 13       		.uleb128 0x13
+ 1699 0114 3F       		.uleb128 0x3f
+ 1700 0115 19       		.uleb128 0x19
+ 1701 0116 02       		.uleb128 0x2
+ 1702 0117 18       		.uleb128 0x18
+ 1703 0118 00       		.byte	0
+ 1704 0119 00       		.byte	0
+ 1705 011a 16       		.uleb128 0x16
+ 1706 011b 34       		.uleb128 0x34
+ 1707 011c 00       		.byte	0
+ 1708 011d 03       		.uleb128 0x3
+ 1709 011e 0E       		.uleb128 0xe
+ 1710 011f 3A       		.uleb128 0x3a
+ 1711 0120 0B       		.uleb128 0xb
+ 1712 0121 3B       		.uleb128 0x3b
+ 1713 0122 05       		.uleb128 0x5
+ 1714 0123 49       		.uleb128 0x49
+ 1715 0124 13       		.uleb128 0x13
+ 1716 0125 3F       		.uleb128 0x3f
+ 1717 0126 19       		.uleb128 0x19
+ 1718 0127 3C       		.uleb128 0x3c
+ 1719 0128 19       		.uleb128 0x19
+ 1720 0129 00       		.byte	0
+ 1721 012a 00       		.byte	0
+ 1722 012b 17       		.uleb128 0x17
+ 1723 012c 2E       		.uleb128 0x2e
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 38
 
 
- 1724 012e 3F       		.uleb128 0x3f
- 1725 012f 19       		.uleb128 0x19
- 1726 0130 3C       		.uleb128 0x3c
- 1727 0131 19       		.uleb128 0x19
- 1728 0132 6E       		.uleb128 0x6e
- 1729 0133 0E       		.uleb128 0xe
- 1730 0134 03       		.uleb128 0x3
- 1731 0135 0E       		.uleb128 0xe
- 1732 0136 3A       		.uleb128 0x3a
- 1733 0137 0B       		.uleb128 0xb
- 1734 0138 3B       		.uleb128 0x3b
- 1735 0139 0B       		.uleb128 0xb
- 1736 013a 00       		.byte	0
- 1737 013b 00       		.byte	0
- 1738 013c 00       		.byte	0
- 1739              		.section	.debug_loc,"",%progbits
- 1740              	.Ldebug_loc0:
- 1741              	.LLST0:
- 1742 0000 42000000 		.4byte	.LVL8
- 1743 0004 4C000000 		.4byte	.LVL9
- 1744 0008 0100     		.2byte	0x1
- 1745 000a 50       		.byte	0x50
- 1746 000b 58000000 		.4byte	.LVL12
- 1747 000f 5A000000 		.4byte	.LVL13
- 1748 0013 0100     		.2byte	0x1
- 1749 0015 50       		.byte	0x50
- 1750 0016 6A000000 		.4byte	.LVL15
- 1751 001a 74000000 		.4byte	.LVL16
- 1752 001e 0100     		.2byte	0x1
- 1753 0020 50       		.byte	0x50
- 1754 0021 80000000 		.4byte	.LVL19
- 1755 0025 82000000 		.4byte	.LVL20
- 1756 0029 0100     		.2byte	0x1
- 1757 002b 50       		.byte	0x50
- 1758 002c A2000000 		.4byte	.LVL23
- 1759 0030 AC000000 		.4byte	.LVL24
- 1760 0034 0100     		.2byte	0x1
- 1761 0036 50       		.byte	0x50
- 1762 0037 B8000000 		.4byte	.LVL27
- 1763 003b BA000000 		.4byte	.LVL28
- 1764 003f 0100     		.2byte	0x1
- 1765 0041 50       		.byte	0x50
- 1766 0042 CA000000 		.4byte	.LVL30
- 1767 0046 D4000000 		.4byte	.LVL31
- 1768 004a 0100     		.2byte	0x1
- 1769 004c 50       		.byte	0x50
- 1770 004d E0000000 		.4byte	.LVL34
- 1771 0051 E2000000 		.4byte	.LVL35
- 1772 0055 0100     		.2byte	0x1
- 1773 0057 50       		.byte	0x50
- 1774 0058 F2000000 		.4byte	.LVL37
- 1775 005c FC000000 		.4byte	.LVL38
- 1776 0060 0100     		.2byte	0x1
- 1777 0062 50       		.byte	0x50
- 1778 0063 08010000 		.4byte	.LVL41
- 1779 0067 0A010000 		.4byte	.LVL42
- 1780 006b 0100     		.2byte	0x1
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 39
+ 1724 012d 00       		.byte	0
+ 1725 012e 3F       		.uleb128 0x3f
+ 1726 012f 19       		.uleb128 0x19
+ 1727 0130 3C       		.uleb128 0x3c
+ 1728 0131 19       		.uleb128 0x19
+ 1729 0132 6E       		.uleb128 0x6e
+ 1730 0133 0E       		.uleb128 0xe
+ 1731 0134 03       		.uleb128 0x3
+ 1732 0135 0E       		.uleb128 0xe
+ 1733 0136 3A       		.uleb128 0x3a
+ 1734 0137 0B       		.uleb128 0xb
+ 1735 0138 3B       		.uleb128 0x3b
+ 1736 0139 0B       		.uleb128 0xb
+ 1737 013a 00       		.byte	0
+ 1738 013b 00       		.byte	0
+ 1739 013c 00       		.byte	0
+ 1740              		.section	.debug_loc,"",%progbits
+ 1741              	.Ldebug_loc0:
+ 1742              	.LLST0:
+ 1743 0000 42000000 		.4byte	.LVL8
+ 1744 0004 4C000000 		.4byte	.LVL9
+ 1745 0008 0100     		.2byte	0x1
+ 1746 000a 50       		.byte	0x50
+ 1747 000b 58000000 		.4byte	.LVL12
+ 1748 000f 5A000000 		.4byte	.LVL13
+ 1749 0013 0100     		.2byte	0x1
+ 1750 0015 50       		.byte	0x50
+ 1751 0016 6A000000 		.4byte	.LVL15
+ 1752 001a 74000000 		.4byte	.LVL16
+ 1753 001e 0100     		.2byte	0x1
+ 1754 0020 50       		.byte	0x50
+ 1755 0021 80000000 		.4byte	.LVL19
+ 1756 0025 82000000 		.4byte	.LVL20
+ 1757 0029 0100     		.2byte	0x1
+ 1758 002b 50       		.byte	0x50
+ 1759 002c A2000000 		.4byte	.LVL23
+ 1760 0030 AC000000 		.4byte	.LVL24
+ 1761 0034 0100     		.2byte	0x1
+ 1762 0036 50       		.byte	0x50
+ 1763 0037 B8000000 		.4byte	.LVL27
+ 1764 003b BA000000 		.4byte	.LVL28
+ 1765 003f 0100     		.2byte	0x1
+ 1766 0041 50       		.byte	0x50
+ 1767 0042 CA000000 		.4byte	.LVL30
+ 1768 0046 D4000000 		.4byte	.LVL31
+ 1769 004a 0100     		.2byte	0x1
+ 1770 004c 50       		.byte	0x50
+ 1771 004d E0000000 		.4byte	.LVL34
+ 1772 0051 E2000000 		.4byte	.LVL35
+ 1773 0055 0100     		.2byte	0x1
+ 1774 0057 50       		.byte	0x50
+ 1775 0058 F2000000 		.4byte	.LVL37
+ 1776 005c FC000000 		.4byte	.LVL38
+ 1777 0060 0100     		.2byte	0x1
+ 1778 0062 50       		.byte	0x50
+ 1779 0063 08010000 		.4byte	.LVL41
+ 1780 0067 0A010000 		.4byte	.LVL42
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 39
 
 
- 1781 006d 50       		.byte	0x50
- 1782 006e 28010000 		.4byte	.LVL46
- 1783 0072 32010000 		.4byte	.LVL47
- 1784 0076 0100     		.2byte	0x1
- 1785 0078 50       		.byte	0x50
- 1786 0079 3E010000 		.4byte	.LVL50
- 1787 007d 40010000 		.4byte	.LVL51
- 1788 0081 0100     		.2byte	0x1
- 1789 0083 50       		.byte	0x50
- 1790 0084 82010000 		.4byte	.LVL56
- 1791 0088 8E010000 		.4byte	.LVL57
- 1792 008c 0100     		.2byte	0x1
- 1793 008e 50       		.byte	0x50
- 1794 008f 00000000 		.4byte	0
- 1795 0093 00000000 		.4byte	0
- 1796              	.LLST1:
- 1797 0097 92010000 		.4byte	.LVL58
- 1798 009b 96010000 		.4byte	.LVL59
- 1799 009f 0900     		.2byte	0x9
- 1800 00a1 70       		.byte	0x70
- 1801 00a2 00       		.sleb128 0
- 1802 00a3 09       		.byte	0x9
- 1803 00a4 F4       		.byte	0xf4
- 1804 00a5 24       		.byte	0x24
- 1805 00a6 09       		.byte	0x9
- 1806 00a7 F8       		.byte	0xf8
- 1807 00a8 26       		.byte	0x26
- 1808 00a9 9F       		.byte	0x9f
- 1809 00aa 96010000 		.4byte	.LVL59
- 1810 00ae 99010000 		.4byte	.LVL60-1
- 1811 00b2 1400     		.2byte	0x14
- 1812 00b4 91       		.byte	0x91
- 1813 00b5 A97F     		.sleb128 -87
- 1814 00b7 94       		.byte	0x94
- 1815 00b8 01       		.byte	0x1
- 1816 00b9 08       		.byte	0x8
- 1817 00ba FF       		.byte	0xff
- 1818 00bb 1A       		.byte	0x1a
- 1819 00bc 38       		.byte	0x38
- 1820 00bd 24       		.byte	0x24
- 1821 00be 73       		.byte	0x73
- 1822 00bf 00       		.sleb128 0
- 1823 00c0 21       		.byte	0x21
- 1824 00c1 09       		.byte	0x9
- 1825 00c2 F4       		.byte	0xf4
- 1826 00c3 24       		.byte	0x24
- 1827 00c4 09       		.byte	0x9
- 1828 00c5 F8       		.byte	0xf8
- 1829 00c6 26       		.byte	0x26
- 1830 00c7 9F       		.byte	0x9f
- 1831 00c8 00000000 		.4byte	0
- 1832 00cc 00000000 		.4byte	0
- 1833              	.LLST2:
- 1834 00d0 E8010000 		.4byte	.LVL69
- 1835 00d4 EC010000 		.4byte	.LVL70
- 1836 00d8 0900     		.2byte	0x9
- 1837 00da 70       		.byte	0x70
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 40
+ 1781 006b 0100     		.2byte	0x1
+ 1782 006d 50       		.byte	0x50
+ 1783 006e 28010000 		.4byte	.LVL46
+ 1784 0072 32010000 		.4byte	.LVL47
+ 1785 0076 0100     		.2byte	0x1
+ 1786 0078 50       		.byte	0x50
+ 1787 0079 3E010000 		.4byte	.LVL50
+ 1788 007d 40010000 		.4byte	.LVL51
+ 1789 0081 0100     		.2byte	0x1
+ 1790 0083 50       		.byte	0x50
+ 1791 0084 82010000 		.4byte	.LVL56
+ 1792 0088 8E010000 		.4byte	.LVL57
+ 1793 008c 0100     		.2byte	0x1
+ 1794 008e 50       		.byte	0x50
+ 1795 008f 00000000 		.4byte	0
+ 1796 0093 00000000 		.4byte	0
+ 1797              	.LLST1:
+ 1798 0097 92010000 		.4byte	.LVL58
+ 1799 009b 96010000 		.4byte	.LVL59
+ 1800 009f 0900     		.2byte	0x9
+ 1801 00a1 70       		.byte	0x70
+ 1802 00a2 00       		.sleb128 0
+ 1803 00a3 09       		.byte	0x9
+ 1804 00a4 F4       		.byte	0xf4
+ 1805 00a5 24       		.byte	0x24
+ 1806 00a6 09       		.byte	0x9
+ 1807 00a7 F8       		.byte	0xf8
+ 1808 00a8 26       		.byte	0x26
+ 1809 00a9 9F       		.byte	0x9f
+ 1810 00aa 96010000 		.4byte	.LVL59
+ 1811 00ae 99010000 		.4byte	.LVL60-1
+ 1812 00b2 1400     		.2byte	0x14
+ 1813 00b4 91       		.byte	0x91
+ 1814 00b5 A97F     		.sleb128 -87
+ 1815 00b7 94       		.byte	0x94
+ 1816 00b8 01       		.byte	0x1
+ 1817 00b9 08       		.byte	0x8
+ 1818 00ba FF       		.byte	0xff
+ 1819 00bb 1A       		.byte	0x1a
+ 1820 00bc 38       		.byte	0x38
+ 1821 00bd 24       		.byte	0x24
+ 1822 00be 73       		.byte	0x73
+ 1823 00bf 00       		.sleb128 0
+ 1824 00c0 21       		.byte	0x21
+ 1825 00c1 09       		.byte	0x9
+ 1826 00c2 F4       		.byte	0xf4
+ 1827 00c3 24       		.byte	0x24
+ 1828 00c4 09       		.byte	0x9
+ 1829 00c5 F8       		.byte	0xf8
+ 1830 00c6 26       		.byte	0x26
+ 1831 00c7 9F       		.byte	0x9f
+ 1832 00c8 00000000 		.4byte	0
+ 1833 00cc 00000000 		.4byte	0
+ 1834              	.LLST2:
+ 1835 00d0 E8010000 		.4byte	.LVL69
+ 1836 00d4 EC010000 		.4byte	.LVL70
+ 1837 00d8 0900     		.2byte	0x9
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 40
 
 
- 1838 00db 00       		.sleb128 0
- 1839 00dc 09       		.byte	0x9
- 1840 00dd F4       		.byte	0xf4
- 1841 00de 24       		.byte	0x24
- 1842 00df 09       		.byte	0x9
- 1843 00e0 F8       		.byte	0xf8
- 1844 00e1 26       		.byte	0x26
- 1845 00e2 9F       		.byte	0x9f
- 1846 00e3 EC010000 		.4byte	.LVL70
- 1847 00e7 EF010000 		.4byte	.LVL71-1
- 1848 00eb 1400     		.2byte	0x14
- 1849 00ed 91       		.byte	0x91
- 1850 00ee AB7F     		.sleb128 -85
- 1851 00f0 94       		.byte	0x94
- 1852 00f1 01       		.byte	0x1
- 1853 00f2 08       		.byte	0x8
- 1854 00f3 FF       		.byte	0xff
- 1855 00f4 1A       		.byte	0x1a
- 1856 00f5 38       		.byte	0x38
- 1857 00f6 24       		.byte	0x24
- 1858 00f7 73       		.byte	0x73
- 1859 00f8 00       		.sleb128 0
- 1860 00f9 21       		.byte	0x21
- 1861 00fa 09       		.byte	0x9
- 1862 00fb F4       		.byte	0xf4
- 1863 00fc 24       		.byte	0x24
- 1864 00fd 09       		.byte	0x9
- 1865 00fe F8       		.byte	0xf8
- 1866 00ff 26       		.byte	0x26
- 1867 0100 9F       		.byte	0x9f
- 1868 0101 00000000 		.4byte	0
- 1869 0105 00000000 		.4byte	0
- 1870              	.LLST3:
- 1871 0109 3E020000 		.4byte	.LVL80
- 1872 010d 42020000 		.4byte	.LVL81
- 1873 0111 0900     		.2byte	0x9
- 1874 0113 70       		.byte	0x70
- 1875 0114 00       		.sleb128 0
- 1876 0115 09       		.byte	0x9
- 1877 0116 F4       		.byte	0xf4
- 1878 0117 24       		.byte	0x24
- 1879 0118 09       		.byte	0x9
- 1880 0119 F8       		.byte	0xf8
- 1881 011a 26       		.byte	0x26
- 1882 011b 9F       		.byte	0x9f
- 1883 011c 42020000 		.4byte	.LVL81
- 1884 0120 45020000 		.4byte	.LVL82-1
- 1885 0124 1400     		.2byte	0x14
- 1886 0126 91       		.byte	0x91
- 1887 0127 AD7F     		.sleb128 -83
- 1888 0129 94       		.byte	0x94
- 1889 012a 01       		.byte	0x1
- 1890 012b 08       		.byte	0x8
- 1891 012c FF       		.byte	0xff
- 1892 012d 1A       		.byte	0x1a
- 1893 012e 38       		.byte	0x38
- 1894 012f 24       		.byte	0x24
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 41
+ 1838 00da 70       		.byte	0x70
+ 1839 00db 00       		.sleb128 0
+ 1840 00dc 09       		.byte	0x9
+ 1841 00dd F4       		.byte	0xf4
+ 1842 00de 24       		.byte	0x24
+ 1843 00df 09       		.byte	0x9
+ 1844 00e0 F8       		.byte	0xf8
+ 1845 00e1 26       		.byte	0x26
+ 1846 00e2 9F       		.byte	0x9f
+ 1847 00e3 EC010000 		.4byte	.LVL70
+ 1848 00e7 EF010000 		.4byte	.LVL71-1
+ 1849 00eb 1400     		.2byte	0x14
+ 1850 00ed 91       		.byte	0x91
+ 1851 00ee AB7F     		.sleb128 -85
+ 1852 00f0 94       		.byte	0x94
+ 1853 00f1 01       		.byte	0x1
+ 1854 00f2 08       		.byte	0x8
+ 1855 00f3 FF       		.byte	0xff
+ 1856 00f4 1A       		.byte	0x1a
+ 1857 00f5 38       		.byte	0x38
+ 1858 00f6 24       		.byte	0x24
+ 1859 00f7 73       		.byte	0x73
+ 1860 00f8 00       		.sleb128 0
+ 1861 00f9 21       		.byte	0x21
+ 1862 00fa 09       		.byte	0x9
+ 1863 00fb F4       		.byte	0xf4
+ 1864 00fc 24       		.byte	0x24
+ 1865 00fd 09       		.byte	0x9
+ 1866 00fe F8       		.byte	0xf8
+ 1867 00ff 26       		.byte	0x26
+ 1868 0100 9F       		.byte	0x9f
+ 1869 0101 00000000 		.4byte	0
+ 1870 0105 00000000 		.4byte	0
+ 1871              	.LLST3:
+ 1872 0109 3E020000 		.4byte	.LVL80
+ 1873 010d 42020000 		.4byte	.LVL81
+ 1874 0111 0900     		.2byte	0x9
+ 1875 0113 70       		.byte	0x70
+ 1876 0114 00       		.sleb128 0
+ 1877 0115 09       		.byte	0x9
+ 1878 0116 F4       		.byte	0xf4
+ 1879 0117 24       		.byte	0x24
+ 1880 0118 09       		.byte	0x9
+ 1881 0119 F8       		.byte	0xf8
+ 1882 011a 26       		.byte	0x26
+ 1883 011b 9F       		.byte	0x9f
+ 1884 011c 42020000 		.4byte	.LVL81
+ 1885 0120 45020000 		.4byte	.LVL82-1
+ 1886 0124 1400     		.2byte	0x14
+ 1887 0126 91       		.byte	0x91
+ 1888 0127 AD7F     		.sleb128 -83
+ 1889 0129 94       		.byte	0x94
+ 1890 012a 01       		.byte	0x1
+ 1891 012b 08       		.byte	0x8
+ 1892 012c FF       		.byte	0xff
+ 1893 012d 1A       		.byte	0x1a
+ 1894 012e 38       		.byte	0x38
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 41
 
 
- 1895 0130 73       		.byte	0x73
- 1896 0131 00       		.sleb128 0
- 1897 0132 21       		.byte	0x21
- 1898 0133 09       		.byte	0x9
- 1899 0134 F4       		.byte	0xf4
- 1900 0135 24       		.byte	0x24
- 1901 0136 09       		.byte	0x9
- 1902 0137 F8       		.byte	0xf8
- 1903 0138 26       		.byte	0x26
- 1904 0139 9F       		.byte	0x9f
- 1905 013a 00000000 		.4byte	0
- 1906 013e 00000000 		.4byte	0
- 1907              	.LLST4:
- 1908 0142 B2010000 		.4byte	.LVL64
- 1909 0146 B5010000 		.4byte	.LVL65-1
- 1910 014a 0100     		.2byte	0x1
- 1911 014c 50       		.byte	0x50
- 1912 014d 00000000 		.4byte	0
- 1913 0151 00000000 		.4byte	0
- 1914              	.LLST5:
- 1915 0155 08020000 		.4byte	.LVL75
- 1916 0159 0B020000 		.4byte	.LVL76-1
- 1917 015d 0100     		.2byte	0x1
- 1918 015f 50       		.byte	0x50
- 1919 0160 00000000 		.4byte	0
- 1920 0164 00000000 		.4byte	0
- 1921              	.LLST6:
- 1922 0168 5E020000 		.4byte	.LVL86
- 1923 016c 61020000 		.4byte	.LVL87-1
- 1924 0170 0100     		.2byte	0x1
- 1925 0172 50       		.byte	0x50
- 1926 0173 00000000 		.4byte	0
- 1927 0177 00000000 		.4byte	0
- 1928              	.LLST7:
- 1929 017b C2010000 		.4byte	.LVL67
- 1930 017f D8010000 		.4byte	.LVL68
- 1931 0183 0100     		.2byte	0x1
- 1932 0185 50       		.byte	0x50
- 1933 0186 00000000 		.4byte	0
- 1934 018a 00000000 		.4byte	0
- 1935              	.LLST8:
- 1936 018e 18020000 		.4byte	.LVL78
- 1937 0192 2E020000 		.4byte	.LVL79
- 1938 0196 0100     		.2byte	0x1
- 1939 0198 50       		.byte	0x50
- 1940 0199 00000000 		.4byte	0
- 1941 019d 00000000 		.4byte	0
- 1942              	.LLST9:
- 1943 01a1 6E020000 		.4byte	.LVL89
- 1944 01a5 84020000 		.4byte	.LVL90
- 1945 01a9 0100     		.2byte	0x1
- 1946 01ab 50       		.byte	0x50
- 1947 01ac 00000000 		.4byte	0
- 1948 01b0 00000000 		.4byte	0
- 1949              	.LLST10:
- 1950 01b4 14000000 		.4byte	.LVL2
- 1951 01b8 18000000 		.4byte	.LVL3
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 42
+ 1895 012f 24       		.byte	0x24
+ 1896 0130 73       		.byte	0x73
+ 1897 0131 00       		.sleb128 0
+ 1898 0132 21       		.byte	0x21
+ 1899 0133 09       		.byte	0x9
+ 1900 0134 F4       		.byte	0xf4
+ 1901 0135 24       		.byte	0x24
+ 1902 0136 09       		.byte	0x9
+ 1903 0137 F8       		.byte	0xf8
+ 1904 0138 26       		.byte	0x26
+ 1905 0139 9F       		.byte	0x9f
+ 1906 013a 00000000 		.4byte	0
+ 1907 013e 00000000 		.4byte	0
+ 1908              	.LLST4:
+ 1909 0142 B2010000 		.4byte	.LVL64
+ 1910 0146 B5010000 		.4byte	.LVL65-1
+ 1911 014a 0100     		.2byte	0x1
+ 1912 014c 50       		.byte	0x50
+ 1913 014d 00000000 		.4byte	0
+ 1914 0151 00000000 		.4byte	0
+ 1915              	.LLST5:
+ 1916 0155 08020000 		.4byte	.LVL75
+ 1917 0159 0B020000 		.4byte	.LVL76-1
+ 1918 015d 0100     		.2byte	0x1
+ 1919 015f 50       		.byte	0x50
+ 1920 0160 00000000 		.4byte	0
+ 1921 0164 00000000 		.4byte	0
+ 1922              	.LLST6:
+ 1923 0168 5E020000 		.4byte	.LVL86
+ 1924 016c 61020000 		.4byte	.LVL87-1
+ 1925 0170 0100     		.2byte	0x1
+ 1926 0172 50       		.byte	0x50
+ 1927 0173 00000000 		.4byte	0
+ 1928 0177 00000000 		.4byte	0
+ 1929              	.LLST7:
+ 1930 017b C2010000 		.4byte	.LVL67
+ 1931 017f D8010000 		.4byte	.LVL68
+ 1932 0183 0100     		.2byte	0x1
+ 1933 0185 50       		.byte	0x50
+ 1934 0186 00000000 		.4byte	0
+ 1935 018a 00000000 		.4byte	0
+ 1936              	.LLST8:
+ 1937 018e 18020000 		.4byte	.LVL78
+ 1938 0192 2E020000 		.4byte	.LVL79
+ 1939 0196 0100     		.2byte	0x1
+ 1940 0198 50       		.byte	0x50
+ 1941 0199 00000000 		.4byte	0
+ 1942 019d 00000000 		.4byte	0
+ 1943              	.LLST9:
+ 1944 01a1 6E020000 		.4byte	.LVL89
+ 1945 01a5 84020000 		.4byte	.LVL90
+ 1946 01a9 0100     		.2byte	0x1
+ 1947 01ab 50       		.byte	0x50
+ 1948 01ac 00000000 		.4byte	0
+ 1949 01b0 00000000 		.4byte	0
+ 1950              	.LLST10:
+ 1951 01b4 14000000 		.4byte	.LVL2
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 42
 
 
- 1952 01bc 0200     		.2byte	0x2
- 1953 01be 30       		.byte	0x30
- 1954 01bf 9F       		.byte	0x9f
- 1955 01c0 18000000 		.4byte	.LVL3
- 1956 01c4 12010000 		.4byte	.LVL44
- 1957 01c8 0100     		.2byte	0x1
- 1958 01ca 54       		.byte	0x54
- 1959 01cb 00000000 		.4byte	0
- 1960 01cf 00000000 		.4byte	0
- 1961              		.section	.debug_aranges,"",%progbits
- 1962 0000 1C000000 		.4byte	0x1c
- 1963 0004 0200     		.2byte	0x2
- 1964 0006 00000000 		.4byte	.Ldebug_info0
- 1965 000a 04       		.byte	0x4
- 1966 000b 00       		.byte	0
- 1967 000c 0000     		.2byte	0
- 1968 000e 0000     		.2byte	0
- 1969 0010 00000000 		.4byte	.LFB64
- 1970 0014 DC020000 		.4byte	.LFE64-.LFB64
- 1971 0018 00000000 		.4byte	0
- 1972 001c 00000000 		.4byte	0
- 1973              		.section	.debug_ranges,"",%progbits
- 1974              	.Ldebug_ranges0:
- 1975 0000 00000000 		.4byte	.LFB64
- 1976 0004 DC020000 		.4byte	.LFE64
- 1977 0008 00000000 		.4byte	0
- 1978 000c 00000000 		.4byte	0
- 1979              		.section	.debug_line,"",%progbits
- 1980              	.Ldebug_line0:
- 1981 0000 9F020000 		.section	.debug_str,"MS",%progbits,1
- 1981      02002802 
- 1981      00000201 
- 1981      FB0E0D00 
- 1981      01010101 
- 1982              	.LASF28:
- 1983 0000 6374726C 		.ascii	"ctrl_reg1\000"
- 1983      5F726567 
- 1983      3100
- 1984              	.LASF47:
- 1985 000a 55415254 		.ascii	"UART_Debug_PutString\000"
- 1985      5F446562 
- 1985      75675F50 
- 1985      75745374 
- 1985      72696E67 
- 1986              	.LASF29:
- 1987 001f 6374726C 		.ascii	"ctrl_reg4\000"
- 1987      5F726567 
- 1987      3400
- 1988              	.LASF41:
- 1989 0029 4F757441 		.ascii	"OutArray\000"
- 1989      72726179 
- 1989      00
- 1990              	.LASF20:
- 1991 0032 4E4F5F45 		.ascii	"NO_ERROR\000"
- 1991      52524F52 
- 1991      00
- 1992              	.LASF16:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 43
+ 1952 01b8 18000000 		.4byte	.LVL3
+ 1953 01bc 0200     		.2byte	0x2
+ 1954 01be 30       		.byte	0x30
+ 1955 01bf 9F       		.byte	0x9f
+ 1956 01c0 18000000 		.4byte	.LVL3
+ 1957 01c4 12010000 		.4byte	.LVL44
+ 1958 01c8 0100     		.2byte	0x1
+ 1959 01ca 54       		.byte	0x54
+ 1960 01cb 00000000 		.4byte	0
+ 1961 01cf 00000000 		.4byte	0
+ 1962              		.section	.debug_aranges,"",%progbits
+ 1963 0000 1C000000 		.4byte	0x1c
+ 1964 0004 0200     		.2byte	0x2
+ 1965 0006 00000000 		.4byte	.Ldebug_info0
+ 1966 000a 04       		.byte	0x4
+ 1967 000b 00       		.byte	0
+ 1968 000c 0000     		.2byte	0
+ 1969 000e 0000     		.2byte	0
+ 1970 0010 00000000 		.4byte	.LFB64
+ 1971 0014 DC020000 		.4byte	.LFE64-.LFB64
+ 1972 0018 00000000 		.4byte	0
+ 1973 001c 00000000 		.4byte	0
+ 1974              		.section	.debug_ranges,"",%progbits
+ 1975              	.Ldebug_ranges0:
+ 1976 0000 00000000 		.4byte	.LFB64
+ 1977 0004 DC020000 		.4byte	.LFE64
+ 1978 0008 00000000 		.4byte	0
+ 1979 000c 00000000 		.4byte	0
+ 1980              		.section	.debug_line,"",%progbits
+ 1981              	.Ldebug_line0:
+ 1982 0000 9F020000 		.section	.debug_str,"MS",%progbits,1
+ 1982      02002802 
+ 1982      00000201 
+ 1982      FB0E0D00 
+ 1982      01010101 
+ 1983              	.LASF28:
+ 1984 0000 6374726C 		.ascii	"ctrl_reg1\000"
+ 1984      5F726567 
+ 1984      3100
+ 1985              	.LASF47:
+ 1986 000a 55415254 		.ascii	"UART_Debug_PutString\000"
+ 1986      5F446562 
+ 1986      75675F50 
+ 1986      75745374 
+ 1986      72696E67 
+ 1987              	.LASF29:
+ 1988 001f 6374726C 		.ascii	"ctrl_reg4\000"
+ 1988      5F726567 
+ 1988      3400
+ 1989              	.LASF41:
+ 1990 0029 4F757441 		.ascii	"OutArray\000"
+ 1990      72726179 
+ 1990      00
+ 1991              	.LASF20:
+ 1992 0032 4E4F5F45 		.ascii	"NO_ERROR\000"
+ 1992      52524F52 
+ 1992      00
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 43
 
 
- 1993 003b 666C6F61 		.ascii	"float32\000"
- 1993      74333200 
- 1994              	.LASF2:
- 1995 0043 73686F72 		.ascii	"short int\000"
- 1995      7420696E 
- 1995      7400
- 1996              	.LASF51:
- 1997 004d 4932435F 		.ascii	"I2C_Peripheral_ReadRegister\000"
- 1997      50657269 
- 1997      70686572 
- 1997      616C5F52 
- 1997      65616452 
- 1998              	.LASF24:
- 1999 0069 73697A65 		.ascii	"sizetype\000"
- 1999      74797065 
- 1999      00
- 2000              	.LASF43:
- 2001 0072 74696D65 		.ascii	"timer_flag\000"
- 2001      725F666C 
- 2001      616700
- 2002              	.LASF45:
- 2003 007d 4932435F 		.ascii	"I2C_Peripheral_IsDeviceConnected\000"
- 2003      50657269 
- 2003      70686572 
- 2003      616C5F49 
- 2003      73446576 
- 2004              	.LASF61:
- 2005 009e 6D61696E 		.ascii	"main\000"
- 2005      00
- 2006              	.LASF54:
- 2007 00a3 54696D65 		.ascii	"Timer_WriteCounter\000"
- 2007      725F5772 
- 2007      69746543 
- 2007      6F756E74 
- 2007      657200
- 2008              	.LASF39:
- 2009 00b6 68656164 		.ascii	"header\000"
- 2009      657200
- 2010              	.LASF53:
- 2011 00bd 6973725F 		.ascii	"isr_StartEx\000"
- 2011      53746172 
- 2011      74457800 
- 2012              	.LASF11:
- 2013 00c9 75696E74 		.ascii	"uint8_t\000"
- 2013      385F7400 
- 2014              	.LASF14:
- 2015 00d1 696E7431 		.ascii	"int16\000"
- 2015      3600
- 2016              	.LASF27:
- 2017 00d7 73746174 		.ascii	"status_register\000"
- 2017      75735F72 
- 2017      65676973 
- 2017      74657200 
- 2018              	.LASF34:
- 2019 00e7 4F757459 		.ascii	"OutY_converted\000"
- 2019      5F636F6E 
- 2019      76657274 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 44
+ 1993              	.LASF16:
+ 1994 003b 666C6F61 		.ascii	"float32\000"
+ 1994      74333200 
+ 1995              	.LASF2:
+ 1996 0043 73686F72 		.ascii	"short int\000"
+ 1996      7420696E 
+ 1996      7400
+ 1997              	.LASF51:
+ 1998 004d 4932435F 		.ascii	"I2C_Peripheral_ReadRegister\000"
+ 1998      50657269 
+ 1998      70686572 
+ 1998      616C5F52 
+ 1998      65616452 
+ 1999              	.LASF24:
+ 2000 0069 73697A65 		.ascii	"sizetype\000"
+ 2000      74797065 
+ 2000      00
+ 2001              	.LASF43:
+ 2002 0072 74696D65 		.ascii	"timer_flag\000"
+ 2002      725F666C 
+ 2002      616700
+ 2003              	.LASF45:
+ 2004 007d 4932435F 		.ascii	"I2C_Peripheral_IsDeviceConnected\000"
+ 2004      50657269 
+ 2004      70686572 
+ 2004      616C5F49 
+ 2004      73446576 
+ 2005              	.LASF61:
+ 2006 009e 6D61696E 		.ascii	"main\000"
+ 2006      00
+ 2007              	.LASF54:
+ 2008 00a3 54696D65 		.ascii	"Timer_WriteCounter\000"
+ 2008      725F5772 
+ 2008      69746543 
+ 2008      6F756E74 
+ 2008      657200
+ 2009              	.LASF39:
+ 2010 00b6 68656164 		.ascii	"header\000"
+ 2010      657200
+ 2011              	.LASF53:
+ 2012 00bd 6973725F 		.ascii	"isr_StartEx\000"
+ 2012      53746172 
+ 2012      74457800 
+ 2013              	.LASF11:
+ 2014 00c9 75696E74 		.ascii	"uint8_t\000"
+ 2014      385F7400 
+ 2015              	.LASF14:
+ 2016 00d1 696E7431 		.ascii	"int16\000"
+ 2016      3600
+ 2017              	.LASF27:
+ 2018 00d7 73746174 		.ascii	"status_register\000"
+ 2018      75735F72 
+ 2018      65676973 
+ 2018      74657200 
+ 2019              	.LASF34:
+ 2020 00e7 4F757459 		.ascii	"OutY_converted\000"
+ 2020      5F636F6E 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 44
 
 
- 2019      656400
- 2020              	.LASF17:
- 2021 00f6 666C6F61 		.ascii	"float\000"
- 2021      7400
- 2022              	.LASF8:
- 2023 00fc 6C6F6E67 		.ascii	"long long int\000"
- 2023      206C6F6E 
- 2023      6720696E 
- 2023      7400
- 2024              	.LASF55:
- 2025 010a 54696D65 		.ascii	"Timer_Start\000"
- 2025      725F5374 
- 2025      61727400 
- 2026              	.LASF6:
- 2027 0116 6C6F6E67 		.ascii	"long int\000"
- 2027      20696E74 
- 2027      00
- 2028              	.LASF33:
- 2029 011f 4F757458 		.ascii	"OutX_converted\000"
- 2029      5F636F6E 
- 2029      76657274 
- 2029      656400
- 2030              	.LASF4:
- 2031 012e 5F5F7569 		.ascii	"__uint8_t\000"
- 2031      6E74385F 
- 2031      7400
- 2032              	.LASF21:
- 2033 0138 4552524F 		.ascii	"ERROR\000"
- 2033      5200
- 2034              	.LASF23:
- 2035 013e 6C6F6E67 		.ascii	"long double\000"
- 2035      20646F75 
- 2035      626C6500 
- 2036              	.LASF1:
- 2037 014a 756E7369 		.ascii	"unsigned char\000"
- 2037      676E6564 
- 2037      20636861 
- 2037      7200
- 2038              	.LASF46:
- 2039 0158 73707269 		.ascii	"sprintf\000"
- 2039      6E746600 
- 2040              	.LASF36:
- 2041 0160 4F757458 		.ascii	"OutX_rounded\000"
- 2041      5F726F75 
- 2041      6E646564 
- 2041      00
- 2042              	.LASF0:
- 2043 016d 7369676E 		.ascii	"signed char\000"
- 2043      65642063 
- 2043      68617200 
- 2044              	.LASF56:
- 2045 0179 4932435F 		.ascii	"I2C_Peripheral_ReadRegisterMulti\000"
- 2045      50657269 
- 2045      70686572 
- 2045      616C5F52 
- 2045      65616452 
- 2046              	.LASF9:
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 45
+ 2020      76657274 
+ 2020      656400
+ 2021              	.LASF17:
+ 2022 00f6 666C6F61 		.ascii	"float\000"
+ 2022      7400
+ 2023              	.LASF8:
+ 2024 00fc 6C6F6E67 		.ascii	"long long int\000"
+ 2024      206C6F6E 
+ 2024      6720696E 
+ 2024      7400
+ 2025              	.LASF55:
+ 2026 010a 54696D65 		.ascii	"Timer_Start\000"
+ 2026      725F5374 
+ 2026      61727400 
+ 2027              	.LASF6:
+ 2028 0116 6C6F6E67 		.ascii	"long int\000"
+ 2028      20696E74 
+ 2028      00
+ 2029              	.LASF33:
+ 2030 011f 4F757458 		.ascii	"OutX_converted\000"
+ 2030      5F636F6E 
+ 2030      76657274 
+ 2030      656400
+ 2031              	.LASF4:
+ 2032 012e 5F5F7569 		.ascii	"__uint8_t\000"
+ 2032      6E74385F 
+ 2032      7400
+ 2033              	.LASF21:
+ 2034 0138 4552524F 		.ascii	"ERROR\000"
+ 2034      5200
+ 2035              	.LASF23:
+ 2036 013e 6C6F6E67 		.ascii	"long double\000"
+ 2036      20646F75 
+ 2036      626C6500 
+ 2037              	.LASF1:
+ 2038 014a 756E7369 		.ascii	"unsigned char\000"
+ 2038      676E6564 
+ 2038      20636861 
+ 2038      7200
+ 2039              	.LASF46:
+ 2040 0158 73707269 		.ascii	"sprintf\000"
+ 2040      6E746600 
+ 2041              	.LASF36:
+ 2042 0160 4F757458 		.ascii	"OutX_rounded\000"
+ 2042      5F726F75 
+ 2042      6E646564 
+ 2042      00
+ 2043              	.LASF0:
+ 2044 016d 7369676E 		.ascii	"signed char\000"
+ 2044      65642063 
+ 2044      68617200 
+ 2045              	.LASF56:
+ 2046 0179 4932435F 		.ascii	"I2C_Peripheral_ReadRegisterMulti\000"
+ 2046      50657269 
+ 2046      70686572 
+ 2046      616C5F52 
+ 2046      65616452 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 45
 
 
- 2047 019a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2047      206C6F6E 
- 2047      6720756E 
- 2047      7369676E 
- 2047      65642069 
- 2048              	.LASF52:
- 2049 01b1 4932435F 		.ascii	"I2C_Peripheral_WriteRegister\000"
- 2049      50657269 
- 2049      70686572 
- 2049      616C5F57 
- 2049      72697465 
- 2050              	.LASF37:
- 2051 01ce 4F757459 		.ascii	"OutY_rounded\000"
- 2051      5F726F75 
- 2051      6E646564 
- 2051      00
- 2052              	.LASF10:
- 2053 01db 756E7369 		.ascii	"unsigned int\000"
- 2053      676E6564 
- 2053      20696E74 
- 2053      00
- 2054              	.LASF7:
- 2055 01e8 6C6F6E67 		.ascii	"long unsigned int\000"
- 2055      20756E73 
- 2055      69676E65 
- 2055      6420696E 
- 2055      7400
- 2056              	.LASF38:
- 2057 01fa 4F75745A 		.ascii	"OutZ_rounded\000"
- 2057      5F726F75 
- 2057      6E646564 
- 2057      00
- 2058              	.LASF48:
- 2059 0207 4932435F 		.ascii	"I2C_Peripheral_Start\000"
- 2059      50657269 
- 2059      70686572 
- 2059      616C5F53 
- 2059      74617274 
- 2060              	.LASF3:
- 2061 021c 73686F72 		.ascii	"short unsigned int\000"
- 2061      7420756E 
- 2061      7369676E 
- 2061      65642069 
- 2061      6E7400
- 2062              	.LASF58:
- 2063 022f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 2063      43313120 
- 2063      352E342E 
- 2063      31203230 
- 2063      31363036 
- 2064 0262 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 2064      20726576 
- 2064      6973696F 
- 2064      6E203233 
- 2064      37373135 
- 2065 0295 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
- 2065      66756E63 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 46
+ 2047              	.LASF9:
+ 2048 019a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2048      206C6F6E 
+ 2048      6720756E 
+ 2048      7369676E 
+ 2048      65642069 
+ 2049              	.LASF52:
+ 2050 01b1 4932435F 		.ascii	"I2C_Peripheral_WriteRegister\000"
+ 2050      50657269 
+ 2050      70686572 
+ 2050      616C5F57 
+ 2050      72697465 
+ 2051              	.LASF37:
+ 2052 01ce 4F757459 		.ascii	"OutY_rounded\000"
+ 2052      5F726F75 
+ 2052      6E646564 
+ 2052      00
+ 2053              	.LASF10:
+ 2054 01db 756E7369 		.ascii	"unsigned int\000"
+ 2054      676E6564 
+ 2054      20696E74 
+ 2054      00
+ 2055              	.LASF7:
+ 2056 01e8 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2056      20756E73 
+ 2056      69676E65 
+ 2056      6420696E 
+ 2056      7400
+ 2057              	.LASF38:
+ 2058 01fa 4F75745A 		.ascii	"OutZ_rounded\000"
+ 2058      5F726F75 
+ 2058      6E646564 
+ 2058      00
+ 2059              	.LASF48:
+ 2060 0207 4932435F 		.ascii	"I2C_Peripheral_Start\000"
+ 2060      50657269 
+ 2060      70686572 
+ 2060      616C5F53 
+ 2060      74617274 
+ 2061              	.LASF3:
+ 2062 021c 73686F72 		.ascii	"short unsigned int\000"
+ 2062      7420756E 
+ 2062      7369676E 
+ 2062      65642069 
+ 2062      6E7400
+ 2063              	.LASF58:
+ 2064 022f 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2064      43313120 
+ 2064      352E342E 
+ 2064      31203230 
+ 2064      31363036 
+ 2065 0262 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2065      20726576 
+ 2065      6973696F 
+ 2065      6E203233 
+ 2065      37373135 
+ 2066 0295 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 46
 
 
- 2065      74696F6E 
- 2065      2D736563 
- 2065      74696F6E 
- 2066              	.LASF19:
- 2067 02bd 63686172 		.ascii	"char\000"
- 2067      00
- 2068              	.LASF12:
- 2069 02c2 696E7433 		.ascii	"int32_t\000"
- 2069      325F7400 
- 2070              	.LASF13:
- 2071 02ca 75696E74 		.ascii	"uint8\000"
- 2071      3800
- 2072              	.LASF35:
- 2073 02d0 4F75745A 		.ascii	"OutZ_converted\000"
- 2073      5F636F6E 
- 2073      76657274 
- 2073      656400
- 2074              	.LASF60:
- 2075 02df 433A5C55 		.ascii	"C:\\Users\\indya\\Desktop\\AY1920_II_HW_05_CERONI_I"
- 2075      73657273 
- 2075      5C696E64 
- 2075      79615C44 
- 2075      65736B74 
- 2076 030e 4E445941 		.ascii	"NDYA\\AY1920_II_HW_05_PROJ_3.cydsn\000"
- 2076      5C415931 
- 2076      3932305F 
- 2076      49495F48 
- 2076      575F3035 
- 2077              	.LASF59:
- 2078 0330 6D61696E 		.ascii	"main.c\000"
- 2078      2E6300
- 2079              	.LASF25:
- 2080 0337 6D657373 		.ascii	"message\000"
- 2080      61676500 
- 2081              	.LASF15:
- 2082 033f 696E7433 		.ascii	"int32\000"
- 2082      3200
- 2083              	.LASF18:
- 2084 0345 646F7562 		.ascii	"double\000"
- 2084      6C6500
- 2085              	.LASF44:
- 2086 034c 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 2086      52784275 
- 2086      66666572 
- 2086      00
- 2087              	.LASF40:
- 2088 0359 666F6F74 		.ascii	"footer\000"
- 2088      657200
- 2089              	.LASF5:
- 2090 0360 5F5F696E 		.ascii	"__int32_t\000"
- 2090      7433325F 
- 2090      7400
- 2091              	.LASF42:
- 2092 036a 41636365 		.ascii	"AccelerationData\000"
- 2092      6C657261 
- 2092      74696F6E 
- 2092      44617461 
-ARM GAS  C:\Users\indya\AppData\Local\Temp\ccccCTtd.s 			page 47
+ 2066      66756E63 
+ 2066      74696F6E 
+ 2066      2D736563 
+ 2066      74696F6E 
+ 2067              	.LASF19:
+ 2068 02bd 63686172 		.ascii	"char\000"
+ 2068      00
+ 2069              	.LASF12:
+ 2070 02c2 696E7433 		.ascii	"int32_t\000"
+ 2070      325F7400 
+ 2071              	.LASF13:
+ 2072 02ca 75696E74 		.ascii	"uint8\000"
+ 2072      3800
+ 2073              	.LASF35:
+ 2074 02d0 4F75745A 		.ascii	"OutZ_converted\000"
+ 2074      5F636F6E 
+ 2074      76657274 
+ 2074      656400
+ 2075              	.LASF60:
+ 2076 02df 433A5C55 		.ascii	"C:\\Users\\indya\\Desktop\\AY1920_II_HW_05_CERONI_I"
+ 2076      73657273 
+ 2076      5C696E64 
+ 2076      79615C44 
+ 2076      65736B74 
+ 2077 030e 4E445941 		.ascii	"NDYA\\AY1920_II_HW_05_PROJ_3.cydsn\000"
+ 2077      5C415931 
+ 2077      3932305F 
+ 2077      49495F48 
+ 2077      575F3035 
+ 2078              	.LASF59:
+ 2079 0330 6D61696E 		.ascii	"main.c\000"
+ 2079      2E6300
+ 2080              	.LASF25:
+ 2081 0337 6D657373 		.ascii	"message\000"
+ 2081      61676500 
+ 2082              	.LASF15:
+ 2083 033f 696E7433 		.ascii	"int32\000"
+ 2083      3200
+ 2084              	.LASF18:
+ 2085 0345 646F7562 		.ascii	"double\000"
+ 2085      6C6500
+ 2086              	.LASF44:
+ 2087 034c 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2087      52784275 
+ 2087      66666572 
+ 2087      00
+ 2088              	.LASF40:
+ 2089 0359 666F6F74 		.ascii	"footer\000"
+ 2089      657200
+ 2090              	.LASF5:
+ 2091 0360 5F5F696E 		.ascii	"__int32_t\000"
+ 2091      7433325F 
+ 2091      7400
+ 2092              	.LASF42:
+ 2093 036a 41636365 		.ascii	"AccelerationData\000"
+ 2093      6C657261 
+ 2093      74696F6E 
+ARM GAS  C:\Users\indya\AppData\Local\Temp\ccbbFjkm.s 			page 47
 
 
- 2092      00
- 2093              	.LASF49:
- 2094 037b 55415254 		.ascii	"UART_Debug_Start\000"
- 2094      5F446562 
- 2094      75675F53 
- 2094      74617274 
- 2094      00
- 2095              	.LASF26:
- 2096 038c 6572726F 		.ascii	"error\000"
- 2096      7200
- 2097              	.LASF57:
- 2098 0392 55415254 		.ascii	"UART_Debug_PutArray\000"
- 2098      5F446562 
- 2098      75675F50 
- 2098      75744172 
- 2098      72617900 
- 2099              	.LASF30:
- 2100 03a6 4F757458 		.ascii	"OutX\000"
- 2100      00
- 2101              	.LASF31:
- 2102 03ab 4F757459 		.ascii	"OutY\000"
- 2102      00
- 2103              	.LASF32:
- 2104 03b0 4F75745A 		.ascii	"OutZ\000"
- 2104      00
- 2105              	.LASF50:
- 2106 03b5 43794465 		.ascii	"CyDelay\000"
- 2106      6C617900 
- 2107              	.LASF22:
- 2108 03bd 4572726F 		.ascii	"ErrorCode\000"
- 2108      72436F64 
- 2108      6500
- 2109              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 2093      44617461 
+ 2093      00
+ 2094              	.LASF49:
+ 2095 037b 55415254 		.ascii	"UART_Debug_Start\000"
+ 2095      5F446562 
+ 2095      75675F53 
+ 2095      74617274 
+ 2095      00
+ 2096              	.LASF26:
+ 2097 038c 6572726F 		.ascii	"error\000"
+ 2097      7200
+ 2098              	.LASF57:
+ 2099 0392 55415254 		.ascii	"UART_Debug_PutArray\000"
+ 2099      5F446562 
+ 2099      75675F50 
+ 2099      75744172 
+ 2099      72617900 
+ 2100              	.LASF30:
+ 2101 03a6 4F757458 		.ascii	"OutX\000"
+ 2101      00
+ 2102              	.LASF31:
+ 2103 03ab 4F757459 		.ascii	"OutY\000"
+ 2103      00
+ 2104              	.LASF32:
+ 2105 03b0 4F75745A 		.ascii	"OutZ\000"
+ 2105      00
+ 2106              	.LASF50:
+ 2107 03b5 43794465 		.ascii	"CyDelay\000"
+ 2107      6C617900 
+ 2108              	.LASF22:
+ 2109 03bd 4572726F 		.ascii	"ErrorCode\000"
+ 2109      72436F64 
+ 2109      6500
+ 2110              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
